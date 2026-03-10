@@ -1,0 +1,239 @@
+.home {
+  min-height: 100vh;
+}
+
+/* Latest Episode Section */
+.latest-episode-section {
+  padding-top: 60px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 32px;
+  padding-bottom: 50.625%; /* 16:9 aspect ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.watch-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.watch-all-link:hover {
+  color: var(--green-bright);
+  transform: translateX(4px);
+}
+
+.watch-all-link span {
+  color: var(--green-bright);
+}
+
+/* Highlights Section */
+.highlights-section {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+.about-section {
+  padding: 100px 0;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-text h3 {
+  color: var(--green-bright);
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  background-color: var(--navy-card);
+  padding: 32px 24px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 255, 159, 0.1);
+}
+
+.stat-icon {
+  margin-bottom: 16px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green-bright);
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Subscribe Section */
+.subscribe-section {
+  background: linear-gradient(135deg, rgba(0, 255, 159, 0.1) 0%, rgba(0, 255, 159, 0.05) 100%);
+  padding: 100px 0;
+}
+
+.platform-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto 64px;
+}
+
+.platform-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px 16px;
+  background-color: var(--navy-card);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+.platform-button:hover {
+  transform: translateY(-4px);
+  background-color: rgba(0, 255, 159, 0.1);
+  box-shadow: 0 12px 24px rgba(0, 255, 159, 0.2);
+}
+
+.platform-button span {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.email-signup {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 48px;
+  background-color: var(--navy-card);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.email-signup h3 {
+  color: var(--green-bright);
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.email-signup > p {
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.signup-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.signup-form input {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.signup-form input:focus {
+  border-color: var(--green-bright);
+}
+
+.signup-form input::placeholder {
+  color: var(--text-muted);
+}
+
+.signup-disclaimer {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .platform-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .platform-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .signup-form {
+    flex-direction: column;
+  }
+  
+  .email-signup {
+    padding: 32px 24px;
+  }
+}

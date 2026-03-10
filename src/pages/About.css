@@ -1,0 +1,145 @@
+.about-page {
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.about-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 32px;
+}
+
+.about-tagline {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.mission-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mission-title {
+  color: var(--green-bright);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.mission-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.mission-text p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.mission-highlight {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.highlight-green {
+  color: var(--green-bright);
+  font-weight: 600;
+}
+
+.mission-footer {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  font-style: italic;
+}
+
+.mission-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.stat-large {
+  background-color: var(--navy-card);
+  padding: 32px 24px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-large:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 255, 159, 0.15);
+}
+
+.stat-large svg {
+  margin-bottom: 16px;
+}
+
+.stat-large .stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green-bright);
+  margin: 12px 0 8px;
+}
+
+.stat-large .stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 968px) {
+  .mission-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .mission-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-logo {
+    width: 150px;
+  }
+  
+  .about-tagline {
+    font-size: 1.1rem;
+  }
+  
+  .mission-title {
+    font-size: 1.75rem;
+  }
+  
+  .mission-highlight {
+    font-size: 1.1rem;
+  }
+  
+  .mission-text p {
+    font-size: 1rem;
+  }
+  
+  .mission-stats {
+    grid-template-columns: 1fr;
+  }
+}
