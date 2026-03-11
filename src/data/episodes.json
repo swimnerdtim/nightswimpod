@@ -1,8 +1,36 @@
 [
   {
-    "id": "hunter-armstrong-clean",
+    "id": "usa-swimmings-streaming-debacle",
+    "title": "USA Swimming's Streaming DEBACLE",
+    "description": "The app has always sucked",
+    "youtubeId": "QA1qB2gcvsk",
+    "thumbnail": "https://img.youtube.com/vi/QA1qB2gcvsk/maxresdefault.jpg",
+    "publishDate": "2026-03-11",
+    "category": "hot-takes",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=QA1qB2gcvsk",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "hunter-armstrong-joins-enhanced-games-clean-checkm",
+    "title": "Hunter Armstrong Joins Enhanced Games \u2013 Clean \u2013 & Checkmates USA Swimming",
+    "description": "Hunter Armstrong declares he'll compete clean in the Enhanced Games and asked USA Swimming what happens to his national team status\u2026 they couldn't answer. We explain why this is massive checkmate f...",
+    "youtubeId": "Om1koOpqUMc",
+    "thumbnail": "https://img.youtube.com/vi/Om1koOpqUMc/maxresdefault.jpg",
+    "publishDate": "2026-03-10",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=Om1koOpqUMc",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "hunter-armstrong-is-cleannow-what-enhanced-games-c",
     "title": "Hunter Armstrong is CLEAN...Now What?? Enhanced Games checks World Aquatics, USA Swimming",
-    "description": "Hunter Armstrong cleared his drug test. Now what? We break down the Enhanced Games vs World Aquatics showdown.",
+    "description": "Enhanced Games 1st clean athlete is USAS's worst nightmare...",
     "youtubeId": "OdJYy-0y9QQ",
     "thumbnail": "https://img.youtube.com/vi/OdJYy-0y9QQ/maxresdefault.jpg",
     "publishDate": "2026-03-10",
@@ -14,85 +42,883 @@
     }
   },
   {
-    "id": "starts-turns-ncaa",
+    "id": "fix-your-starts-turns-now-or-lose-at-ncaas-dax-elv",
     "title": "Fix Your Starts & Turns NOW or Lose at NCAAs (Dax & Elvis Roast Bad Technique)",
-    "description": "Dax & Elvis OFF on terrible starts, turns, and technique in college swimming—especially after watching NCAAs.",
-    "youtubeId": "dQw4w9WgXcQ",
-    "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "description": "Dax & Elvis go OFF on terrible starts, turns, and technique in college swimming \u2014 especially after watching conference meets.\nThey call out Arizona State\u2019s Ilia (Ilya) for painfully slow turns desp...",
+    "youtubeId": "5gMdhzRBV-8",
+    "thumbnail": "https://img.youtube.com/vi/5gMdhzRBV-8/maxresdefault.jpg",
     "publishDate": "2026-03-09",
-    "category": "training",
+    "category": "interviews",
     "platforms": {
-      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "youtube": "https://www.youtube.com/watch?v=5gMdhzRBV-8",
       "spotify": "https://open.spotify.com/show/...",
       "apple": "https://podcasts.apple.com/..."
     }
   },
   {
-    "id": "ncaa-swimming-talent-gap",
-    "title": "The NCAA Swimming Talent Gap is INSANE: Why DI, Texas & Cal Dominate and Most Teams Can't Catch Up",
-    "description": "Unfiltered SEC Championships recap on Night Swim Podcast! Dax Hill (Texas Longhorns legend, NCAA champ)...",
-    "youtubeId": "dQw4w9WgXcQ",
-    "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "id": "the-ncaa-swimming-talent-gap-is-insane-why-uva-tex",
+    "title": "The NCAA Swimming Talent Gap is INSANE: Why UVA, Texas & Cal Dominate  And Most Teams Can't Catch Up",
+    "description": "Dax & Elvis break down the massive talent gap in NCAA swimming that's leaving most teams in the dust. On the women's side: UVA is in a league of their own, with Texas a distant second and everyone ...",
+    "youtubeId": "kEs_eblcrXk",
+    "thumbnail": "https://img.youtube.com/vi/kEs_eblcrXk/maxresdefault.jpg",
     "publishDate": "2026-03-08",
     "category": "interviews",
     "platforms": {
-      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "youtube": "https://www.youtube.com/watch?v=kEs_eblcrXk",
       "spotify": "https://open.spotify.com/show/...",
       "apple": "https://podcasts.apple.com/..."
     }
   },
   {
-    "id": "josh-liendo-sec-nationals",
-    "title": "Josh Liendo's Insane Late Push - Texas Sprint Struggles | What Uwin Sec Recap",
-    "description": "Unfiltered SEC Championships recap on Night Swim Podcast. Dax & Elvis break down Josh Liendo's late surge...",
-    "youtubeId": "dQw4w9WgXcQ",
-    "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "id": "josh-liendos-heisman-lane-push-texas-sprint-strugg",
+    "title": "Josh Liendo's Heisman Lane Push + Texas Sprint Struggles | Night Swim SEC Recap",
+    "description": "Unfiltered SEC Championships recap on Night Swim Podcast! Dax Hill (Texas Longhorns legend, NCAA champ) and Elvis Burrows break down the \"Texas Invite\" that is now the SECs. Josh Liendo dominates w...",
+    "youtubeId": "7NUUXjSZ2BY",
+    "thumbnail": "https://img.youtube.com/vi/7NUUXjSZ2BY/maxresdefault.jpg",
     "publishDate": "2026-03-07",
-    "category": "events",
+    "category": "interviews",
     "platforms": {
-      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "youtube": "https://www.youtube.com/watch?v=7NUUXjSZ2BY",
       "spotify": "https://open.spotify.com/show/...",
       "apple": "https://podcasts.apple.com/..."
     }
   },
   {
-    "id": "uva-women-crash-acc",
-    "title": "UVA Women Crush ACC! Stanford's 3/1 Sprint Beatdown + Liberty's Cinderella 4 Meet Upset Story",
-    "description": "Dax & Elvis break down the UVA women's domination at ACC Championships: 25 straight ACC...",
-    "youtubeId": "dQw4w9WgXcQ",
-    "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "id": "uva-women-crush-accs-again-stanfords-371-point-bea",
+    "title": "UVA Women CRUSH ACCs Again! Stanford's 371-Point Beatdown + Ledecky Dominance & NCAA Power Shifts",
+    "description": "Dax & Elvis break down the UVA women's swimming team's dominant 7th straight ACC Championship win \u2014 crushing Stanford by over 370 points (1410.5 to 1039) and Cal too! We dive into Katie/Kaylee Lede...",
+    "youtubeId": "ilh1xKn0qZA",
+    "thumbnail": "https://img.youtube.com/vi/ilh1xKn0qZA/maxresdefault.jpg",
     "publishDate": "2026-03-06",
-    "category": "events",
+    "category": "interviews",
     "platforms": {
-      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "youtube": "https://www.youtube.com/watch?v=ilh1xKn0qZA",
       "spotify": "https://open.spotify.com/show/...",
       "apple": "https://podcasts.apple.com/..."
     }
   },
   {
-    "id": "mens-acc-championships-recap",
-    "title": "Men's ACC Championships 2025: Freshman Phenom Max Williamson Breaks Zero Relays + NC State's DQs",
-    "description": "Dax and Elvis react to the insane number of automatic NCAA qualifying times (A-cuts that...",
-    "youtubeId": "dQw4w9WgXcQ",
-    "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "id": "mens-acc-champs-freshman-phenom-max-williamson-why",
+    "title": "Men's ACC Champs: Freshman Phenom Max Williamson + Why UVA Men Are Struggling Under Todd DeSorbo",
+    "description": "Dax and Elvis break down the 2026 Men's ACC Swimming Championships with zero lifeguards and full unfiltered takes. Freshman standout Max Williamson (UVA) drops bombs in the 200 IM (silver medal, sc...",
+    "youtubeId": "KWc-WLSzr5c",
+    "thumbnail": "https://img.youtube.com/vi/KWc-WLSzr5c/maxresdefault.jpg",
     "publishDate": "2026-03-05",
-    "category": "events",
+    "category": "interviews",
     "platforms": {
-      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "youtube": "https://www.youtube.com/watch?v=KWc-WLSzr5c",
       "spotify": "https://open.spotify.com/show/...",
       "apple": "https://podcasts.apple.com/..."
     }
   },
   {
-    "id": "womens-big-ten-championships",
-    "title": "Women's Big Ten Championships – 4A Cuts from IA & Ohio State Finals",
-    "description": "Dax and Elvis react to the insane women's Big Ten Championships. Automatic qualifications everywhere...",
-    "youtubeId": "dQw4w9WgXcQ",
-    "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "id": "insane-depth-womens-swimming-big-10s",
+    "title": "INSANE DEPTH: Women's Swimming Big 10's",
+    "description": "NCAA gunna leave all these fast swimmers at home tho",
+    "youtubeId": "D2RK96cRf8Q",
+    "thumbnail": "https://img.youtube.com/vi/D2RK96cRf8Q/maxresdefault.jpg",
     "publishDate": "2026-03-04",
-    "category": "hot-takes",
+    "category": "events",
     "platforms": {
-      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "youtube": "https://www.youtube.com/watch?v=D2RK96cRf8Q",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "womens-big-ten-championships-59-a-cuts-from-b-c-fi",
+    "title": "Women's Big Ten Championships \u2013 59 A-Cuts from B & C Finals?!",
+    "description": "Dax and Elvis react to the insane number of automatic NCAA qualifying times (A-cuts) that came out of the B- and C-finals at the 2026 Women's Big Ten Championships. They discuss what this means for...",
+    "youtubeId": "APK_K7-cjYI",
+    "thumbnail": "https://img.youtube.com/vi/APK_K7-cjYI/maxresdefault.jpg",
+    "publishDate": "2026-03-04",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=APK_K7-cjYI",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "china-pays-20k-to-show-up",
+    "title": "China Pays $20k TO SHOW UP",
+    "description": "Plus prize money!",
+    "youtubeId": "jvT6-rL5PCM",
+    "thumbnail": "https://img.youtube.com/vi/jvT6-rL5PCM/maxresdefault.jpg",
+    "publishDate": "2026-03-03",
+    "category": "news",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=jvT6-rL5PCM",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "china-pays-swimmers-20k-just-to-show-up-usa-swimmi",
+    "title": "China Pays Swimmers $20K Just to Show Up \u2013 USA Swimming Exposed!",
+    "description": "China is shaking up swimming with MASSIVE payouts at the 2026 China Open in Shenzhen \u2013 up to $20,000 appearance fees just for showing up, plus $10K for 1st, $8K for 2nd, $6K for 3rd, flights, and h...",
+    "youtubeId": "AcYEvI4oBt0",
+    "thumbnail": "https://img.youtube.com/vi/AcYEvI4oBt0/maxresdefault.jpg",
+    "publishDate": "2026-03-03",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=AcYEvI4oBt0",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "can-ryan-murphy-medal-in-la-2028",
+    "title": "Can Ryan Murphy Medal in LA 2028?",
+    "description": "Is he focusing more on 50/100?",
+    "youtubeId": "3vYX_RByxbg",
+    "thumbnail": "https://img.youtube.com/vi/3vYX_RByxbg/maxresdefault.jpg",
+    "publishDate": "2026-03-02",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=3vYX_RByxbg",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "ryan-murphy-is-training-time-to-get-the-united-sta",
+    "title": "Ryan Murphy is TRAINING - time to get the United States of Backstroke back on track",
+    "description": "Ryan Murphy is back in the pool training for the LA 2028 Olympics after a year+ break \u2014 but is this comeback realistic? In this raw clip, we break down why his weight room focus might be holding hi...",
+    "youtubeId": "ZhhouWZzvgk",
+    "thumbnail": "https://img.youtube.com/vi/ZhhouWZzvgk/maxresdefault.jpg",
+    "publishDate": "2026-03-02",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=ZhhouWZzvgk",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "practice-vs-meets-which-really-matters-more-in-swi",
+    "title": "Practice vs Meets: Which REALLY Matters More in Swimming?",
+    "description": "In this heated discussion, we dive deep into one of the biggest debates in competitive swimming: Does practice matter more than meets, or do meets matter more than practice?\nWe break down real scen...",
+    "youtubeId": "ta6COnbd9ro",
+    "thumbnail": "https://img.youtube.com/vi/ta6COnbd9ro/maxresdefault.jpg",
+    "publishDate": "2026-03-01",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=ta6COnbd9ro",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "elite-mentality-shorts",
+    "title": "Elite Mentality \ud83d\udd25 #shorts",
+    "description": "The difference between good and great isn't talent\u2014it's mentality.\n\nFull episode: [Will be added after main publishes]\n\n\ud83c\udf19 Night Swim Podcast with Dax Hill & Elvis Burrows\n\n#swimming #elitementality...",
+    "youtubeId": "hylz8s4A16E",
+    "thumbnail": "https://img.youtube.com/vi/hylz8s4A16E/maxresdefault.jpg",
+    "publishDate": "2026-02-28",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=hylz8s4A16E",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "elite-mentality-what-separates-champions-from-comp",
+    "title": "Elite Mentality: What Separates Champions from Competitors | Night Swim Podcast",
+    "description": "The difference between good and great isn't talent\u2014it's mentality. Dax and Elvis break down what it really takes to compete at the elite level: the mental toughness, the discipline, the grind that ...",
+    "youtubeId": "6zQW90Kuv7w",
+    "thumbnail": "https://img.youtube.com/vi/6zQW90Kuv7w/maxresdefault.jpg",
+    "publishDate": "2026-02-28",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=6zQW90Kuv7w",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "jack-kelly-kiss-me-im-irish",
+    "title": "Jack Kelly: Kiss Me, I'm Irish!",
+    "description": "Jack Kelly has gone from Brown to Texas to Ireland. His journey to LA 2028 has been an exciting one. \n\n\n\ud83c\udf19 Night Swim Podcast\nWhen the pool lights go out, the real talk begins. Hosted by Dax Hill (N...",
+    "youtubeId": "jfVaua7Rfh8",
+    "thumbnail": "https://img.youtube.com/vi/jfVaua7Rfh8/maxresdefault.jpg",
+    "publishDate": "2026-02-27",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=jfVaua7Rfh8",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "18-is-the-new-19-swimflation-is-out-of-control",
+    "title": "18 Is the New 19?! Swimflation Is Out of Control.",
+    "description": "Are we living in the era of Swimflation?\n\nIn this episode of Night Swim, we dive into:\n\nWhy 18 might be the new 19 in the 50 free\n\nThe rise of \u201cfreshman records\u201d in college swimming\n\nUT\u2019s legendary...",
+    "youtubeId": "l1CEH8MqryI",
+    "thumbnail": "https://img.youtube.com/vi/l1CEH8MqryI/maxresdefault.jpg",
+    "publishDate": "2026-02-26",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=l1CEH8MqryI",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "freshman-records-night-swim-podcast",
+    "title": "Freshman Records | Night Swim Podcast",
+    "description": "Dax Hill and Elvis Burrows dive into freshman records in this Night Swim episode.\n\n\n\ud83c\udf19 Night Swim Podcast\nWhen the pool lights go out, the real talk begins. Hosted by Dax Hill (NCAA champ, Texas Lon...",
+    "youtubeId": "8zhXV_bFqHg",
+    "thumbnail": "https://img.youtube.com/vi/8zhXV_bFqHg/maxresdefault.jpg",
+    "publishDate": "2026-02-26",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=8zhXV_bFqHg",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "college-swimming-is-cooking-itself",
+    "title": "College Swimming is COOKING itself",
+    "description": "Brian Schrader is upset with the CSCAA over the NCAA changes that have eliminated half of the races and is allowing slower swimmers get invited to the big show.",
+    "youtubeId": "ZgcFuzYi2RQ",
+    "thumbnail": "https://img.youtube.com/vi/ZgcFuzYi2RQ/maxresdefault.jpg",
+    "publishDate": "2026-02-25",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=ZgcFuzYi2RQ",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "ncaa-swimming-is-ruining-itself-and-brian-schrader",
+    "title": "NCAA Swimming Is Ruining Itself. And Brian Schrader Just Said It.",
+    "description": "Ohio State associate head coach Brian Schrader is speaking out against the NCAA\u2019s recent championship changes \u2014 and he\u2019s not holding back.\n\nFrom eliminating B finals to altering qualification stand...",
+    "youtubeId": "HmAPzi0eXyI",
+    "thumbnail": "https://img.youtube.com/vi/HmAPzi0eXyI/maxresdefault.jpg",
+    "publishDate": "2026-02-25",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=HmAPzi0eXyI",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "michael-andrew-im-done-with-the-200-im-why-hes-dro",
+    "title": "Michael Andrew: \"I'm DONE with the 200 IM\" \u2013 Why He's Dropping It for Good!",
+    "description": "Sprint king Michael Andrew opens up about finally walking away from the 200 Individual Medley after years of battling its demands, explaining how he's shifting full focus to his powerhouse 50s and ...",
+    "youtubeId": "-t9YxjWSA9M",
+    "thumbnail": "https://img.youtube.com/vi/-t9YxjWSA9M/maxresdefault.jpg",
+    "publishDate": "2026-02-23",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=-t9YxjWSA9M",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "michael-andrew-ditches-asu-back-to-dads-usrpt-root",
+    "title": "Michael Andrew Ditches ASU: Back to Dad's USRPT Roots in Hawaii for 2028 LA Olympics!",
+    "description": "Olympic gold medalist Michael Andrew shocks the swimming world by leaving Arizona State's powerhouse sprint environment after just over a year to make a full-time return to training with his lifelo...",
+    "youtubeId": "vL8cUA-Q7M0",
+    "thumbnail": "https://img.youtube.com/vi/vL8cUA-Q7M0/maxresdefault.jpg",
+    "publishDate": "2026-02-23",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=vL8cUA-Q7M0",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "the-vaccine-backlash-before-tokyo",
+    "title": "The Vaccine Backlash Before Tokyo",
+    "description": "Dive into the controversy surrounding Olympic gold medalist Michael Andrew's bold decision to skip the COVID vaccine before the Tokyo Games\u2014sparking backlash from teammates, media storms, and debat...",
+    "youtubeId": "zDtwZaQSngQ",
+    "thumbnail": "https://img.youtube.com/vi/zDtwZaQSngQ/maxresdefault.jpg",
+    "publishDate": "2026-02-21",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=zDtwZaQSngQ",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "adidas-guns-on-social-media",
+    "title": "Adidas + \u201cguns on social media",
+    "description": "Olympic swimmer Michael Andrew's wild Adidas partnership stories take a hilarious turn as he recounts a never-before-shared funny tale linking the brand's iconic stripes to guns on this must-watch ...",
+    "youtubeId": "6g-dF4IiMjA",
+    "thumbnail": "https://img.youtube.com/vi/6g-dF4IiMjA/maxresdefault.jpg",
+    "publishDate": "2026-02-21",
+    "category": "news",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=6g-dF4IiMjA",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "la-2028-focus-50s-shady-procedures",
+    "title": "LA 2028 focus + 50s + shady procedures",
+    "description": "As the LA 2028 Olympics loom, the controversial Enhanced Games\u2014backed by Peter Thiel and featuring athletes in their 50s using risky, medically supervised but widely criticized 'shady' performance-...",
+    "youtubeId": "2jYcJxMWUdM",
+    "thumbnail": "https://img.youtube.com/vi/2jYcJxMWUdM/maxresdefault.jpg",
+    "publishDate": "2026-02-20",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=2jYcJxMWUdM",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "michael-andrew-why-i-left-asu-returned-to-dads-usr",
+    "title": "Michael Andrew: Why I Left ASU, Returned to Dad's USRPT, & My LA 2028 Plan",
+    "description": "Michael Andrew joins Dax & Elvis on Night Swim for his most open interview yet.\nThe Olympic gold medalist opens up about:\n\u2022 Leaving Arizona State University after one year and returning to train fu...",
+    "youtubeId": "Apu4dbQZT-o",
+    "thumbnail": "https://img.youtube.com/vi/Apu4dbQZT-o/maxresdefault.jpg",
+    "publishDate": "2026-02-16",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=Apu4dbQZT-o",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "safesport-parental-threats-coach-authority",
+    "title": "SafeSport, Parental Threats & Coach Authority",
+    "description": "Have you been threatened by a parent!? Probably!",
+    "youtubeId": "f5qABStx_4A",
+    "thumbnail": "https://img.youtube.com/vi/f5qABStx_4A/maxresdefault.jpg",
+    "publishDate": "2026-02-14",
+    "category": "news",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=f5qABStx_4A",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "kaatsu-blood-flow-restriction-training-in-swimming",
+    "title": "KAATSU / Blood Flow Restriction Training in Swimming",
+    "description": "Gimmick?",
+    "youtubeId": "4zWFtQJRaZU",
+    "thumbnail": "https://img.youtube.com/vi/4zWFtQJRaZU/maxresdefault.jpg",
+    "publishDate": "2026-02-13",
+    "category": "training",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=4zWFtQJRaZU",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "57-of-coaches-get-threatened-by-parents-safesport-",
+    "title": "57% of Coaches Get THREATENED by Parents \u2013 SafeSport Nightmare Exposed \ud83d\ude21",
+    "description": "SwimSwam drops bombs: over half of coaches face parent threats. We unpack why\u2014lack of rep, no clear standards, kids weaponizing \"bullying.\" Dax & Elvis on standing on business, building fear/respec...",
+    "youtubeId": "GhbMm3bLy6I",
+    "thumbnail": "https://img.youtube.com/vi/GhbMm3bLy6I/maxresdefault.jpg",
+    "publishDate": "2026-02-13",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=GhbMm3bLy6I",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "13-year-old-superboy-swims-4km-in-ocean-to-save-fa",
+    "title": "13-Year-Old Superboy Swims 4KM in Ocean to Save Family \u2013 The Killer Mentality We Need \ud83e\uddb8\u200d\u2642\ufe0f",
+    "description": "Austin Appleby (13) ditches life jacket, battles cold waves, swims miles to get help\u2014pure intolerance for losing. Dax reframes it: this is the \"burn the ships\" mindset missing from modern swimming....",
+    "youtubeId": "1TMChrOA5yM",
+    "thumbnail": "https://img.youtube.com/vi/1TMChrOA5yM/maxresdefault.jpg",
+    "publishDate": "2026-02-12",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=1TMChrOA5yM",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "michael-andrews-kaatsu-secret-exposed-game-changer",
+    "title": "Michael Andrew's KAATSU Secret Exposed \u2013 Game-Changer or Gimmick? \ud83e\udd14",
+    "description": "Blood flow restriction cuffs on Michael Andrew? We dive deep into KAATSU training: how it works, the rehab origins, potential gains for swimmers, but is it worth the risk/cost? Dax questions the me...",
+    "youtubeId": "sFm72aWdOn0",
+    "thumbnail": "https://img.youtube.com/vi/sFm72aWdOn0/maxresdefault.jpg",
+    "publishDate": "2026-02-11",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=sFm72aWdOn0",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "let-the-swimmers-eat",
+    "title": "LET THE SWIMMERS EAT!!",
+    "description": "Down the hatch...",
+    "youtubeId": "dtRxOeMMuW4",
+    "thumbnail": "https://img.youtube.com/vi/dtRxOeMMuW4/maxresdefault.jpg",
+    "publishDate": "2026-02-10",
+    "category": "news",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=dtRxOeMMuW4",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "swimmer-nutrition-stop-starving-yourself-eat-every",
+    "title": "Swimmer Nutrition: Stop Starving Yourself - Eat EVERYTHING (Our Hot Take) \ud83c\udf54",
+    "description": "Young swimmers are malnourished AF because of crazy diets\u2014Dax says \"eat it all\" especially pre-college! We roast restrictive parents, share Lochte Skittles stories, and drop gold from Jack Roach: \"...",
+    "youtubeId": "s-Z9AQxMOcM",
+    "thumbnail": "https://img.youtube.com/vi/s-Z9AQxMOcM/maxresdefault.jpg",
+    "publishDate": "2026-02-10",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=s-Z9AQxMOcM",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "would-you-ratherpb-or-win",
+    "title": "Would You Rather...PB or WIN?!?",
+    "description": "All i do is win win win win win",
+    "youtubeId": "AnShGmBspqM",
+    "thumbnail": "https://img.youtube.com/vi/AnShGmBspqM/maxresdefault.jpg",
+    "publishDate": "2026-02-09",
+    "category": "news",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=AnShGmBspqM",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "best-time-or-winning-the-brutal-truth-elite-swimme",
+    "title": "Best Time or WINNING? The Brutal Truth Elite Swimmers Won't Admit \ud83d\udd25",
+    "description": "Dax & Elvis go head-to-head: Is dropping a PB the real flex... or is it making your opponents QUIT and fear you in the pool? We break down why wins are greater than times at college level and beyon...",
+    "youtubeId": "-9FowcUEtlI",
+    "thumbnail": "https://img.youtube.com/vi/-9FowcUEtlI/maxresdefault.jpg",
+    "publishDate": "2026-02-09",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=-9FowcUEtlI",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "when-dax-elvis-have-no-topic-things-get-wild-night",
+    "title": "When Dax & Elvis Have NO TOPIC... Things Get WILD \ud83d\ude02 | Night Swim",
+    "description": "What happens when Night Swim runs out of topics? Absolute chaos.\n\nDax and Elvis go off-script and the results are hilarious. This is what happens when two elite swimmers have nothing planned and ju...",
+    "youtubeId": "SHHG8wX-98U",
+    "thumbnail": "https://img.youtube.com/vi/SHHG8wX-98U/maxresdefault.jpg",
+    "publishDate": "2026-02-08",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=SHHG8wX-98U",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "ditch-morning-practice-the-controversial-take-ever",
+    "title": "DITCH Morning Practice?! \ud83c\udf05 The CONTROVERSIAL Take Every Swimmer Needs to Hear",
+    "description": "Is morning practice actually helping you... or holding you back?\n\nDax and Elvis drop a controversial take that's going to trigger every coach who loves 5 AM wake-ups. But hear them out \u2014 the scienc...",
+    "youtubeId": "SzDHd7C6Uiw",
+    "thumbnail": "https://img.youtube.com/vi/SzDHd7C6Uiw/maxresdefault.jpg",
+    "publishDate": "2026-02-07",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=SzDHd7C6Uiw",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "ryan-lochtes-worst-injury-yet-you-wont-believe-thi",
+    "title": "Ryan Lochte's WORST Injury Yet \ud83c\udf5d (You Won't Believe This)",
+    "description": "Olympic swimming legend Ryan Lochte's string of bad luck continues...While competing on \"Worst Cook in America,\" the 12-time Olympic medalist slipped on SPAGHETTI and injured himself badly enough t...",
+    "youtubeId": "7fC0hY--pR4",
+    "thumbnail": "https://img.youtube.com/vi/7fC0hY--pR4/maxresdefault.jpg",
+    "publishDate": "2026-02-06",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=7fC0hY--pR4",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "american-olympians-to-be-paid-200k",
+    "title": "American Olympians to be paid $200K",
+    "description": "Have to die to get paid?",
+    "youtubeId": "AW2dGEOQA3o",
+    "thumbnail": "https://img.youtube.com/vi/AW2dGEOQA3o/maxresdefault.jpg",
+    "publishDate": "2026-02-05",
+    "category": "news",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=AW2dGEOQA3o",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "billionaire-drops-100m-every-us-olympian-gets-2000",
+    "title": "Billionaire Drops $100M: Every US Olympian Gets $200,000: Is It ENOUGH? \ud83d\udcb0",
+    "description": "The Olympics are finally paying up \u2014 but is $200K per gold medal actually enough?\n\nDax and Elvis break down the new Olympic payout structure and debate whether swimmers are finally getting what the...",
+    "youtubeId": "_LNoEFfWd9Q",
+    "thumbnail": "https://img.youtube.com/vi/_LNoEFfWd9Q/maxresdefault.jpg",
+    "publishDate": "2026-02-05",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=_LNoEFfWd9Q",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "swimming-will-soon-become-nascar",
+    "title": "Swimming Will Soon Become NASCAR",
+    "description": "Put ads everywhere!",
+    "youtubeId": "f6mOgsP1LAw",
+    "thumbnail": "https://img.youtube.com/vi/f6mOgsP1LAw/maxresdefault.jpg",
+    "publishDate": "2026-02-04",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=f6mOgsP1LAw",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "ilya-kharun-ditches-canada-for-team-usa-its-all-ab",
+    "title": "Ilya Kharun Ditches Canada for Team USA \u2013 It's ALL About the MONEY (Dressel & Andrew in Trouble?)",
+    "description": "Ilya Kharun just switched to represent the USA. Dax and Elvis have THOUGHTS.\n\nThe Canadian-born butterfly star is now competing for America. Is this good for the sport? Is it fair? What does it mea...",
+    "youtubeId": "qooxVXE5QnY",
+    "thumbnail": "https://img.youtube.com/vi/qooxVXE5QnY/maxresdefault.jpg",
+    "publishDate": "2026-02-03",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=qooxVXE5QnY",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "the-mcevoy-method-why-coaches-refuse-to-evolve",
+    "title": "The McEvoy Method: Why Coaches REFUSE to Evolve",
+    "description": "Dax and Elvis break down Cam McEvoy's sprint training philosophy and why the swimming world keeps \"discovering\" what sprint coaches have known for decades.\n\nIs the McEvoy Method really new? Why are...",
+    "youtubeId": "cjw3Hjx2eBM",
+    "thumbnail": "https://img.youtube.com/vi/cjw3Hjx2eBM/maxresdefault.jpg",
+    "publishDate": "2026-02-02",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=cjw3Hjx2eBM",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "2k-bounty-on-josh-liendo-will-he-do-a-touchdown-da",
+    "title": "$2K Bounty on Josh Liendo: Will He Do a Touchdown Dance & Shout Out Night Swim?!",
+    "description": "Dax & Elvis throw down a $2,000 challenge to star swimmer Josh Liendo (Florida Gators / Canada): Do an epic touchdown dance (or sick celebration) after winning at NCAAs + shout out \"Night Swim Podc...",
+    "youtubeId": "Dnuc1Vp0VFY",
+    "thumbnail": "https://img.youtube.com/vi/Dnuc1Vp0VFY/maxresdefault.jpg",
+    "publishDate": "2026-01-28",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=Dnuc1Vp0VFY",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "josh-liendo-spills-florida-training-dressel-exit-s",
+    "title": "Josh Liendo Spills: Florida Training, Dressel Exit, SCM WR 100 Fly, Weight Room Secrets & More",
+    "description": "The lifeguards are GONE \u2014 it's time for real swim talk.\n\nFor the FIRST TIME EVER on Night Swim, we welcome not one, not two, but THREE Black swimmers on the mic \u2014 a world record in itself \ud83d\ude02. Olympi...",
+    "youtubeId": "6FCoLoSboxM",
+    "thumbnail": "https://img.youtube.com/vi/6FCoLoSboxM/maxresdefault.jpg",
+    "publishDate": "2026-01-27",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=6FCoLoSboxM",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "van-mathias-is-the-best-american-breaststroker-rig",
+    "title": "Van Mathias is the BEST American Breaststroker RIGHT NOW!",
+    "description": "Van Mathias (Indiana/John Long) is quietly dominating\u2014new Pro Swim Series records, top US times in breast, and flying under the radar! Dax & Elvis connect the dots: John Long's Queens/Team Elite/Au...",
+    "youtubeId": "rFeQz7rY_IQ",
+    "thumbnail": "https://img.youtube.com/vi/rFeQz7rY_IQ/maxresdefault.jpg",
+    "publishDate": "2026-01-26",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=rFeQz7rY_IQ",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "whats-wrong-with-kieran-smith-no-pbs-in-5-years-is",
+    "title": "What's Wrong with Kieran Smith? No PB's in 5 Years. Is it time to leave Gainesville?",
+    "description": "Kieran Smith is stacking World Championship teams and medals... but no best times in forever and zero buzz. Dax & Elvis ask the tough question: Is it time to leave Gainesville? We compare his yarda...",
+    "youtubeId": "-msa7Vq8u6A",
+    "thumbnail": "https://img.youtube.com/vi/-msa7Vq8u6A/maxresdefault.jpg",
+    "publishDate": "2026-01-25",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=-msa7Vq8u6A",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "erisman-siblings-are-the-new-swim-royalty-cal-fres",
+    "title": "Erisman Siblings Are the NEW Swim Royalty! Cal Freshman Ryan Erisman is HIM",
+    "description": "The Erisman family is taking over! Ryan Erisman (Cal) upset big names like Carson Foster & Luke Hobson for gold in the 200 fly/200 free at Pro Swim Series, while sister Rylee is upsetting vets like...",
+    "youtubeId": "OAG_Fd7jY94",
+    "thumbnail": "https://img.youtube.com/vi/OAG_Fd7jY94/maxresdefault.jpg",
+    "publishDate": "2026-01-24",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=OAG_Fd7jY94",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "simone-manuel-doing-7000-yard-practices-at-29-bob-",
+    "title": "Simone Manuel Doing 7,000 Yard Practices at 29?! Bob Bowman is COOKING Her!",
+    "description": "Simone Manuel admits in her SwimSwam interview: She's never done 7k practices before... until Bob Bowman! She's looking jacked and swimming solid (50 free win, close battles), but is this high-volu...",
+    "youtubeId": "t90PQqPGbc0",
+    "thumbnail": "https://img.youtube.com/vi/t90PQqPGbc0/maxresdefault.jpg",
+    "publishDate": "2026-01-23",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=t90PQqPGbc0",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "katie-ledecky-drops-2nd-fastest-1500-ever-but-were",
+    "title": "Katie Ledecky Drops 2nd FASTEST 1500 EVER... But We're Getting BORED? (Wild Fix Idea!)",
+    "description": "Katie Ledecky just swam 15:23.21\u2014the SECOND fastest 1500 freestyle in HISTORY\u2014at Pro Swim Series Austin! She's owning the top 12 all-time spots, but Dax & Elvis admit: We're starting to take her do...",
+    "youtubeId": "3Z0avc0eldU",
+    "thumbnail": "https://img.youtube.com/vi/3Z0avc0eldU/maxresdefault.jpg",
+    "publishDate": "2026-01-22",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=3Z0avc0eldU",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "grousset-smashes-dressels-us-open-record-vows-to-b",
+    "title": "Grousset SMASHES Dressel's US Open Record & Vows to BREAK His 100 Fly WORLD RECORD!",
+    "description": "Maxime Grousset is cooking! He smashed Caeleb Dressel's US Open record in the 50 fly semis (22.81!) and already beat him in the 100 fly at the 2026 Pro Swim Series Austin. Dax & Elvis go full send:...",
+    "youtubeId": "Ap1LwyIrpPY",
+    "thumbnail": "https://img.youtube.com/vi/Ap1LwyIrpPY/maxresdefault.jpg",
+    "publishDate": "2026-01-21",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=Ap1LwyIrpPY",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "the-pro-swim-series-is-so-boring-nobody-sponsors-i",
+    "title": "The Pro Swim Series is so BORING nobody sponsors it!",
+    "description": "Dax & Elvis break down the newly rebranded Pro Swim Series (RIP TYR Pro Series) after the latest Austin stop. Why are meets so predictable and dull? Fast swimmers sandbagging prelims, endless C/D f...",
+    "youtubeId": "W9-B3nIpDeY",
+    "thumbnail": "https://img.youtube.com/vi/W9-B3nIpDeY/maxresdefault.jpg",
+    "publishDate": "2026-01-20",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=W9-B3nIpDeY",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "the-most-ruthless-pool-games-swimmers-play-breath-",
+    "title": "The Most Ruthless Pool Games Swimmers Play: Breath-Hold RPS, Ankle Grabs,  & More \ud83d\ude02",
+    "description": "From ankle-grabbing Lochte in a spoons-style hunt game to underwater rock-paper-scissors breath-holding battles and diabolical coach relays \u2013 Dax & Elvis share the most legendary, ruthless, and hil...",
+    "youtubeId": "dMLzeJcZuu8",
+    "thumbnail": "https://img.youtube.com/vi/dMLzeJcZuu8/maxresdefault.jpg",
+    "publishDate": "2026-01-16",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=dMLzeJcZuu8",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "taper-is-a-myth-in-2026-why-swimmers-go-18-mid-yea",
+    "title": "Taper Is a MYTH in 2026? Why Swimmers Go 18-Mid Year-Round Now \u2013 Dax vs Elvis Debate",
+    "description": "Is the magical \"taper unicorn\" dead? Dax (Eddie Reese purist) defends the psychological edge of big end-of-season rest, while Elvis argues modern training + recovery cycles mean fast swimming all y...",
+    "youtubeId": "F09gFdqvR8E",
+    "thumbnail": "https://img.youtube.com/vi/F09gFdqvR8E/maxresdefault.jpg",
+    "publishDate": "2026-01-15",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=F09gFdqvR8E",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "ryan-lochte-just-sold-3-olympic-gold-medals-for-38",
+    "title": "Ryan Lochte Just Sold 3 Olympic Gold Medals for $385K\u2026 We Were Right Again \ud83d\ude33",
+    "description": "Ryan Lochte auctions three Olympic relay gold medals for nearly $400K amid divorce, IRS issues, and legal battles. Dax & Elvis called this months ago and stand by their take: empathy for Lochte whi...",
+    "youtubeId": "OP5K-eZZD6Y",
+    "thumbnail": "https://img.youtube.com/vi/OP5K-eZZD6Y/maxresdefault.jpg",
+    "publishDate": "2026-01-14",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=OP5K-eZZD6Y",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "ilaria-bianchi-bumped-from-2026-winter-olympics-to",
+    "title": "Ilaria Bianchi Bumped from 2026 Winter Olympics Torch for Influencers?!",
+    "description": "Italian legend Ilaria Bianchi (4x Olympian) vents about being removed from the 2026 Milan-Cortina Winter Olympics torch relay to make room for \"influencers.\" Dax & Elvis debate: smart marketing mov...",
+    "youtubeId": "-LwszZ14d4c",
+    "thumbnail": "https://img.youtube.com/vi/-LwszZ14d4c/maxresdefault.jpg",
+    "publishDate": "2026-01-13",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=-LwszZ14d4c",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "adam-peaty-marries-changes-name-to-adam-ramsey-pea",
+    "title": "Adam Peaty Marries & Changes Name to Adam Ramsey Peaty \u2013 British Tradition or Branding Genius?",
+    "description": "Adam Peaty (now Addie Ramsey Peaty?) changes his name after marrying into the Ramsey family. Is this British royal tradition, a branding masterstroke, or just hilarious breaststroker energy? Dax & ...",
+    "youtubeId": "yjNC6vpfuF4",
+    "thumbnail": "https://img.youtube.com/vi/yjNC6vpfuF4/maxresdefault.jpg",
+    "publishDate": "2026-01-12",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=yjNC6vpfuF4",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "bella-sims-shades-florida-gators-food-negativity",
+    "title": "Bella Sims SHADES Florida Gators Food & Negativity",
+    "description": "Bella Sims drops comments about \"negativity\" at Florida and takes shots at Gainesville food on the MiSHEgan podcast. Dax & Elvis dive deep: immaturity, tough SEC culture under Anthony Nesty, Greg T...",
+    "youtubeId": "4MeHMS3RDMM",
+    "thumbnail": "https://img.youtube.com/vi/4MeHMS3RDMM/maxresdefault.jpg",
+    "publishDate": "2026-01-11",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=4MeHMS3RDMM",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "why-cal-baptist-cut-their-swim-team-and-why-top-sw",
+    "title": "Why Cal Baptist Cut Their Swim Team\u2026 And Why Top Swimmers NEED to Post More in 2026",
+    "description": "Dax & Elvis break down the shocking Cal Baptist swim team cancellation and Jon Reiter's hot take that swimmers aren't posting enough content. Is the \"swim influencer\" era the key to saving college ...",
+    "youtubeId": "4YkGgRjRRFI",
+    "thumbnail": "https://img.youtube.com/vi/4YkGgRjRRFI/maxresdefault.jpg",
+    "publishDate": "2026-01-10",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=4YkGgRjRRFI",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "1000-for-the-first-ncaa-swimmer-to-do-a-cannonball",
+    "title": "$1,000 for the first NCAA swimmer to do a cannonball celly + mention Night Swim",
+    "description": "Dax & Elvis go OFF on why competitive swimming is too serious and needs MORE FUN! From 1980s beer carts & toga parties to modern ideas like cannonballs into sponsor bowls, touchdown dances after wi...",
+    "youtubeId": "xwsKOzqG9no",
+    "thumbnail": "https://img.youtube.com/vi/xwsKOzqG9no/maxresdefault.jpg",
+    "publishDate": "2026-01-09",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=xwsKOzqG9no",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "women-are-breaking-world-records-at-a-rate-men-can",
+    "title": "Women Are Breaking World Records at a Rate Men Can\u2019t Match - Here\u2019s Why",
+    "description": "Women are stacking multiple world records - and the men aren\u2019t.\nIn this Night Swim clip, we dive into why female swimmers currently dominate the world-record leaderboard, why the numbers look wild ...",
+    "youtubeId": "2Zl5Ygaxfhg",
+    "thumbnail": "https://img.youtube.com/vi/2Zl5Ygaxfhg/maxresdefault.jpg",
+    "publishDate": "2026-01-08",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=2Zl5Ygaxfhg",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "we-hate-the-olympic-50m-stroke-qualification-rules",
+    "title": "We HATE the Olympic 50m Stroke Qualification Rules",
+    "description": "Dax and Elvis share Cam McEvoy's frustration and displeasure with the convoluted Olympic qualification rules for the 50m stroke events (50 Fly, 50 Back, 50 Breast).\nThey break down why the 50s of s...",
+    "youtubeId": "Us8mjVFRy10",
+    "thumbnail": "https://img.youtube.com/vi/Us8mjVFRy10/maxresdefault.jpg",
+    "publishDate": "2026-01-07",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=Us8mjVFRy10",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "tunisia-owes-coach-50k-for-olympic-gold-philippe-l",
+    "title": "Tunisia OWES Coach 50K for Olympic Gold - Philippe Lucas Calls Out Federation Drama",
+    "description": "French coach Philippe Lucas trained Tunisia's Ahmed Jaouadi to double World Champion last summer\u2026and now the federation allegedly owes him \u20ac50K in bonuses. They're claiming they paid the swimmer an...",
+    "youtubeId": "aMZKyn0Zmiw",
+    "thumbnail": "https://img.youtube.com/vi/aMZKyn0Zmiw/maxresdefault.jpg",
+    "publishDate": "2026-01-06",
+    "category": "interviews",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=aMZKyn0Zmiw",
+      "spotify": "https://open.spotify.com/show/...",
+      "apple": "https://podcasts.apple.com/..."
+    }
+  },
+  {
+    "id": "sprint-technique-secret-you-need-long-stroke-effic",
+    "title": "Sprint Technique Secret: You NEED Long Stroke Efficiency First (Controversial Take)",
+    "description": "Everyone says grind yards to build your aerobic base before sprinting\u2026 but is that garbage? Dax and Elvis argue the REAL foundation for elite sprinting is learning long, efficient long-course strok...",
+    "youtubeId": "DVPpcs-JD3A",
+    "thumbnail": "https://img.youtube.com/vi/DVPpcs-JD3A/maxresdefault.jpg",
+    "publishDate": "2026-01-05",
+    "category": "events",
+    "platforms": {
+      "youtube": "https://www.youtube.com/watch?v=DVPpcs-JD3A",
       "spotify": "https://open.spotify.com/show/...",
       "apple": "https://podcasts.apple.com/..."
     }
