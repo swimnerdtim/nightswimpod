@@ -1,0 +1,225 @@
+.episode-page {
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 32px;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--green-bright);
+}
+
+.episode-header {
+  margin-bottom: 40px;
+}
+
+.episode-date {
+  color: var(--green-bright);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.episode-title-large {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.episode-video {
+  margin-bottom: 48px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: var(--navy-dark);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.episode-details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+.episode-description-full h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.episode-description-full p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.episode-platforms-large h3 {
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+}
+
+.platform-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.platform-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.platform-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.platform-button.youtube {
+  background-color: #FF0000;
+  color: white;
+}
+
+.platform-button.youtube:hover {
+  background-color: #CC0000;
+}
+
+.platform-button.spotify {
+  background-color: #1DB954;
+  color: white;
+}
+
+.platform-button.spotify:hover {
+  background-color: #1AA34A;
+}
+
+.platform-button.apple {
+  background-color: #FA243C;
+  color: white;
+}
+
+.platform-button.apple:hover {
+  background-color: #DC1F35;
+}
+
+.more-episodes {
+  padding-top: 64px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.more-episodes h3 {
+  font-size: 1.75rem;
+  margin-bottom: 32px;
+}
+
+.related-episodes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.related-episode {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--navy-dark);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-episode:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.related-episode img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.related-episode-info {
+  padding: 16px;
+}
+
+.related-episode-date {
+  color: var(--green-bright);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.related-episode-info h4 {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.not-found {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.not-found h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.not-found p {
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+@media (max-width: 1024px) {
+  .episode-details {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .related-episodes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .episode-title-large {
+    font-size: 1.75rem;
+  }
+  
+  .episode-description-full p {
+    font-size: 1rem;
+  }
+  
+  .more-episodes h3 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,5 +1,8 @@
 .episode-card {
   position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .episode-thumbnail {
