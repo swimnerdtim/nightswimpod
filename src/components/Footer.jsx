@@ -7,7 +7,7 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <img src="/logo.png" alt="Night Swim Podcast" className="footer-logo" />
+            <img src="/nightswimpod/logo.png" alt="Night Swim Podcast" className="footer-logo" />
             <p className="footer-tagline">
               When the pool lights go out, the real talk begins.
             </p>
@@ -47,8 +47,8 @@ function Footer() {
           <div className="footer-section">
             <h4>Subscribe</h4>
             <div className="footer-subscribe">
-              <a href="https://podcasts.apple.com/..." target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
-              <a href="https://open.spotify.com/..." target="_blank" rel="noopener noreferrer">Spotify</a>
+              <a href="https://podcasts.apple.com/us/podcast/night-swim-podcast/id1853013593" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
+              <a href="https://open.spotify.com/show/5jeYpru0iqfbtmhDg56IoI" target="_blank" rel="noopener noreferrer">Spotify</a>
               <a href="https://www.youtube.com/@nightswimpodcast" target="_blank" rel="noopener noreferrer">YouTube</a>
             </div>
           </div>
