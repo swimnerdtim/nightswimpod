@@ -6,7 +6,7 @@ function About() {
       <section className="section">
         <div className="container">
           <div className="about-hero">
-            <img src="/logo.png" alt="Night Swim Podcast" className="about-logo" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Night Swim Podcast" className="about-logo" />
             <h1 className="section-title">ABOUT NIGHT SWIM</h1>
             <p className="about-tagline">
               Your weekly destination for everything swimming. From elite athlete interviews to breaking news, 
