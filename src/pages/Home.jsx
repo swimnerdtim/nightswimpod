@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import EpisodeCard from '../components/EpisodeCard';
 import episodes from '../data/episodes.json';
 import './Home.css';
@@ -6,6 +7,40 @@ import './Home.css';
 function Home() {
   const latestEpisode = episodes[0];
   const highlightEpisodes = episodes.slice(0, 6);
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState(''); // 'loading', 'success', 'error'
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+    setMessage('');
+
+    try {
+      const response = await fetch('https://swimnerd-server-signup.onrender.com/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus('success');
+        setMessage('Thanks for subscribing! 🎉');
+        setEmail('');
+      } else {
+        setStatus('error');
+        setMessage(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      setStatus('error');
+      setMessage('Network error. Please try again.');
+      console.error('Signup error:', error);
+    }
+  };
 
   return (
     <div className="home">
@@ -158,10 +193,32 @@ function Home() {
           <div className="email-signup">
             <h3>JOIN THE SWIM CREW</h3>
             <p>Get exclusive updates, behind-the-scenes content, and be the first to know about new episodes and special guests.</p>
-            <form className="signup-form">
-              <input type="email" placeholder="Enter your email" required />
-              <button type="submit" className="btn-primary">Subscribe</button>
+            <form className="signup-form" onSubmit={handleSubmit}>
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={status === 'loading'}
+                required 
+              />
+              <button 
+                type="submit" 
+                className="btn-primary"
+                disabled={status === 'loading'}
+              >
+                {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+              </button>
             </form>
+            {message && (
+              <p className={`signup-message ${status}`} style={{
+                marginTop: '10px',
+                color: status === 'success' ? 'var(--green-bright)' : '#ff6b6b',
+                fontWeight: 'bold'
+              }}>
+                {message}
+              </p>
+            )}
             <p className="signup-disclaimer">No spam, ever. Unsubscribe anytime.</p>
           </div>
         </div>
