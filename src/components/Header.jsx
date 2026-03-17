@@ -7,7 +7,7 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <img src="/logo.png" alt="Night Swim Podcast" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Night Swim Podcast" />
           </Link>
           
           <nav className="nav">
