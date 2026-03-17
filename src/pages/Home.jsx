@@ -99,7 +99,7 @@ function Home() {
                 Night Swim is unfiltered swim culture every week.
               </p>
               <p>
-                From USA Swimming's gay pride drama to the Enhanced Games controversy, NCAA battles to Olympic tea – Night Swim covers it all with no scripts and no PR. 
+                From NCAA battles to Olympic tea, Enhanced Games controversy to recruiting drama – Night Swim covers it all with no scripts and no PR. 
                 Just honest takes on the sport we've dedicated our lives to.
               </p>
               <p>
