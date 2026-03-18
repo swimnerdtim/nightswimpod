@@ -7,7 +7,7 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <img src="/nightswimpod/logo.png" alt="Night Swim Podcast" className="footer-logo" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Night Swim Podcast" className="footer-logo" />
             <p className="footer-tagline">
               When the pool lights go out, the real talk begins.
             </p>
