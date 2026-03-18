@@ -3,6 +3,11 @@ import episodes from '../data/episodes.json';
 import './Episodes.css';
 
 function Episodes() {
+  // Sort episodes by publish date (newest first)
+  const sortedEpisodes = [...episodes].sort((a, b) => 
+    new Date(b.publishDate) - new Date(a.publishDate)
+  );
+
   return (
     <div className="episodes-page">
       <section className="section">
@@ -13,11 +18,11 @@ function Episodes() {
           </p>
           
           <div className="episodes-count">
-            {episodes.length} episode{episodes.length !== 1 ? 's' : ''}
+            {sortedEpisodes.length} episode{sortedEpisodes.length !== 1 ? 's' : ''}
           </div>
           
           <div className="grid-3">
-            {episodes.map(episode => (
+            {sortedEpisodes.map(episode => (
               <EpisodeCard key={episode.id} episode={episode} />
             ))}
           </div>

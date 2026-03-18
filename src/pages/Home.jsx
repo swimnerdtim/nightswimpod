@@ -5,8 +5,13 @@ import episodes from '../data/episodes.json';
 import './Home.css';
 
 function Home() {
-  const latestEpisode = episodes[0];
-  const highlightEpisodes = episodes.slice(0, 6);
+  // Sort episodes by publish date (newest first)
+  const sortedEpisodes = [...episodes].sort((a, b) => 
+    new Date(b.publishDate) - new Date(a.publishDate)
+  );
+  
+  const latestEpisode = sortedEpisodes[0];
+  const highlightEpisodes = sortedEpisodes.slice(0, 6);
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState(''); // 'loading', 'success', 'error'
   const [message, setMessage] = useState('');
