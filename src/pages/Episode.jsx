@@ -105,13 +105,40 @@ function Episode() {
               <h2>About This Episode</h2>
               <p>{episode.description}</p>
               
-              {episode.transcript && (
+              {episode.fullTranscript && (
                 <div className="episode-transcript">
-                  <h2>Episode Transcript</h2>
+                  <h2>Full Episode Transcript (with Timestamps)</h2>
+                  <div className="transcript-content transcript-with-timestamps">
+                    {episode.fullTranscript.split('\n').map((line, index) => {
+                      const match = line.match(/^\[(\d+:\d+)\]\s*(.+)$/);
+                      if (match) {
+                        const [, timestamp, text] = match;
+                        return (
+                          <p key={index} className="transcript-line">
+                            <span className="timestamp">{timestamp}</span>
+                            <span className="text">{text}</span>
+                          </p>
+                        );
+                      }
+                      return line.trim() && <p key={index}>{line}</p>;
+                    })}
+                  </div>
+                  <div className="transcript-footer">
+                    <p>🎙️ Presented by <a href="https://swimnerd.com" target="_blank" rel="noopener noreferrer">Swimnerd</a></p>
+                  </div>
+                </div>
+              )}
+              
+              {!episode.fullTranscript && episode.transcript && (
+                <div className="episode-transcript">
+                  <h2>Episode Description</h2>
                   <div className="transcript-content">
                     {episode.transcript.split('\n').map((paragraph, index) => (
                       paragraph.trim() && <p key={index}>{paragraph}</p>
                     ))}
+                  </div>
+                  <div className="transcript-footer">
+                    <p>🎙️ Presented by <a href="https://swimnerd.com" target="_blank" rel="noopener noreferrer">Swimnerd</a></p>
                   </div>
                 </div>
               )}

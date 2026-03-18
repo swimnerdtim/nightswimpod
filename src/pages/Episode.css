@@ -97,6 +97,50 @@
   margin-bottom: 16px;
 }
 
+.transcript-with-timestamps {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Droid Sans Mono', monospace;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.transcript-line {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px !important;
+}
+
+.transcript-line .timestamp {
+  color: var(--green-bright);
+  font-weight: 600;
+  min-width: 60px;
+  flex-shrink: 0;
+}
+
+.transcript-line .text {
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.transcript-footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.transcript-footer a {
+  color: var(--green-bright);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.transcript-footer a:hover {
+  color: var(--green-dark);
+  text-decoration: underline;
+}
+
 .episode-platforms-large h3 {
   font-size: 1.25rem;
   margin-bottom: 24px;
