@@ -104,6 +104,17 @@ function Episode() {
             <div className="episode-description-full">
               <h2>About This Episode</h2>
               <p>{episode.description}</p>
+              
+              {episode.transcript && (
+                <div className="episode-transcript">
+                  <h2>Episode Transcript</h2>
+                  <div className="transcript-content">
+                    {episode.transcript.split('\n').map((paragraph, index) => (
+                      paragraph.trim() && <p key={index}>{paragraph}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
             
             <div className="episode-platforms-large">

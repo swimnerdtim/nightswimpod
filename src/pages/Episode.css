@@ -76,6 +76,27 @@
   font-size: 1.1rem;
 }
 
+.episode-transcript {
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.episode-transcript h2 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.transcript-content {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.transcript-content p {
+  margin-bottom: 16px;
+}
+
 .episode-platforms-large h3 {
   font-size: 1.25rem;
   margin-bottom: 24px;
@@ -104,30 +125,30 @@
 }
 
 .platform-button.youtube {
-  background-color: #FF0000;
-  color: white;
+  background-color: var(--green-bright);
+  color: var(--navy-dark);
 }
 
 .platform-button.youtube:hover {
-  background-color: #CC0000;
+  background-color: var(--green-dark);
 }
 
 .platform-button.spotify {
-  background-color: #1DB954;
-  color: white;
+  background-color: var(--green-bright);
+  color: var(--navy-dark);
 }
 
 .platform-button.spotify:hover {
-  background-color: #1AA34A;
+  background-color: var(--green-dark);
 }
 
 .platform-button.apple {
-  background-color: #FA243C;
-  color: white;
+  background-color: var(--green-bright);
+  color: var(--navy-dark);
 }
 
 .platform-button.apple:hover {
-  background-color: #DC1F35;
+  background-color: var(--green-dark);
 }
 
 .more-episodes {
