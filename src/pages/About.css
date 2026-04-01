@@ -70,6 +70,18 @@
   font-style: italic;
 }
 
+.host-link {
+  color: var(--green-bright);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.host-link:hover {
+  color: var(--green-neon);
+  border-bottom-color: var(--green-neon);
+}
+
 .mission-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
