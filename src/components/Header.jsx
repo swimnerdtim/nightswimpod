@@ -5,9 +5,6 @@ function Header() {
   return (
     <header className="header">
       <div className="container">
-        <div className="presented-by-badge">
-          Presented by <a href="https://swimnerd.com" target="_blank" rel="noopener noreferrer">Swimnerd.com</a>
-        </div>
         <div className="header-content">
           <Link to="/" className="logo">
             <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Night Swim Podcast" />
