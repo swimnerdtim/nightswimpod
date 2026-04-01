@@ -99,8 +99,8 @@ function Home() {
             <div className="about-text">
               <h3>MEET YOUR HOSTS</h3>
               <p>
-                <strong style={{color: 'var(--green-bright)'}}>Dax Hill</strong> (NCAA champ, Texas Longhorns legend, high-performance technique guru @BryoIo) & 
-                <strong style={{color: 'var(--green-bright)'}}> Elvis Burrows</strong> (Bahamian Olympian, national record holder, founder of Burrow's Best swimmer hair and skin care). 
+                <strong><a href="https://www.reykli.com/" target="_blank" rel="noopener noreferrer" className="host-link">Dax Hill</a></strong> (NCAA champ, Texas Longhorns legend, high-performance technique guru) & 
+                <strong><a href="https://burrowsbest.com/" target="_blank" rel="noopener noreferrer" className="host-link">Elvis Burrows</a></strong> (Bahamian Olympian, national record holder, founder of Burrow's Best swimmer hair and skin care). 
                 Night Swim is unfiltered swim culture every week.
               </p>
               <p>
