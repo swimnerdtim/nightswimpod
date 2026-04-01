@@ -24,7 +24,7 @@ function About() {
                   dives into the depths of swimming with unedited, unrehearsed stories from the pool deck and beyond.
                 </p>
                 <p>
-                  Hosted by former NCAA champion <strong>Dax Hill</strong> and Bahamian Olympian <strong><a href="https://burrowsbest.com/" target="_blank" rel="noopener noreferrer" className="host-link">Elvis Burrows</a></strong>, 
+                  Hosted by former NCAA champion <strong><a href="https://www.reykli.com/" target="_blank" rel="noopener noreferrer" className="host-link">Dax Hill</a></strong> and Bahamian Olympian <strong><a href="https://burrowsbest.com/" target="_blank" rel="noopener noreferrer" className="host-link">Elvis Burrows</a></strong>, 
                   we bring you authentic conversations about the sport we've dedicated our lives to. 
                   From hot takes on the latest competitions to deep dives with elite athletes.
                 </p>
