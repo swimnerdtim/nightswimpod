@@ -7,6 +7,27 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.presented-by-badge {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 8px;
+}
+
+.presented-by-badge a {
+  color: var(--green-bright);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.presented-by-badge a:hover {
+  color: var(--green-neon);
+  text-decoration: underline;
+}
+
 .header-content {
   display: flex;
   align-items: center;
