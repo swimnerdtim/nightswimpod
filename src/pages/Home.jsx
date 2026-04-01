@@ -99,8 +99,7 @@ function Home() {
             <div className="about-text">
               <h3>MEET YOUR HOSTS</h3>
               <p>
-                <strong><a href="https://www.reykli.com/" target="_blank" rel="noopener noreferrer" className="host-link">Dax Hill</a></strong> (NCAA champ, Texas Longhorns legend, high-performance technique guru) & 
-                <strong><a href="https://burrowsbest.com/" target="_blank" rel="noopener noreferrer" className="host-link">Elvis Burrows</a></strong> (Bahamian Olympian, national record holder, founder of Burrow's Best swimmer hair and skin care). 
+                <strong><a href="https://www.reykli.com/" target="_blank" rel="noopener noreferrer" className="host-link">Dax Hill</a></strong> (NCAA champ, Texas Longhorns legend, high-performance technique guru) & <strong><a href="https://burrowsbest.com/" target="_blank" rel="noopener noreferrer" className="host-link">Elvis Burrows</a></strong> (Bahamian Olympian, national record holder, founder of Burrow's Best swimmer hair and skin care). 
                 Night Swim is unfiltered swim culture every week.
               </p>
               <p>
@@ -108,7 +107,7 @@ function Home() {
                 Just honest takes on the sport we've dedicated our lives to.
               </p>
               <p>
-                New episodes weekly. Grab your goggles, hit subscribe, and dive in. 🏊‍♂️ Presented by <strong>Swimnerd</strong>.
+                New episodes weekly. Grab your goggles, hit subscribe, and dive in. 🏊‍♂️ Presented by <strong><a href="https://swimnerd.com" target="_blank" rel="noopener noreferrer" className="host-link">Swimnerd</a></strong>.
               </p>
             </div>
             
