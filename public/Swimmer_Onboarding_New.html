@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swimnerd Swimmer App - Onboarding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .phone-container {
+            width: 375px;
+            height: 812px;
+            background: #1a1a1a;
+            border-radius: 45px;
+            padding: 12px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+            position: relative;
+            border: 3px solid #2a2a2a;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 35px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .dynamic-island {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 30px;
+            background: #000;
+            border-radius: 20px;
+            z-index: 1000;
+        }
+
+        .progress-container {
+            position: absolute;
+            top: 55px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #e0e0e0;
+            z-index: 999;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .screen {
+            display: none;
+            height: 100%;
+            padding: 80px 30px 100px 30px;
+            position: relative;
+            animation: slideIn 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .screen.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .screen-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .screen-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2a2a2a;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .screen-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .checkmark {
+            color: #00ff88;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .button-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+        }
+
+        .primary-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .primary-button:active {
+            transform: scale(0.98);
+        }
+
+        .skip-button {
+            width: 100%;
+            padding: 18px;
+            background: transparent;
+            color: #666;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .dots-container {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ddd;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        .welcome-screen {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+        }
+
+        .welcome-screen .screen-title {
+            color: white;
+            font-size: 36px;
+        }
+
+        .welcome-screen .screen-subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 20px;
+        }
+
+        .logo {
+            font-size: 60px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <div class="dynamic-island"></div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <!-- SCREEN 0: Welcome -->
+            <div class="screen welcome-screen active" id="screen0">
+                <div class="screen-content">
+                    <div class="logo">🏊‍♂️</div>
+                    <h1 class="screen-title">Welcome to Swimnerd</h1>
+                    <p class="screen-subtitle">Empower your swimming journey with access to the world's best coaches, AI support, and a vibrant community.</p>
+                </div>
+                <div class="button-container">
+                    <button class="primary-button" onclick="nextScreen()">Get Started</button>
+                    <button class="skip-button" onclick="skipOnboarding()">Skip</button>
+                </div>
+            </div>
+
+            <!-- SCREEN 1: Practice Scanner -->
+            <div class="screen" id="screen1">
+                <div class="screen-content">
+                    <div class="feature-icon">📸</div>
+                    <h2 class="screen-title"><span class="checkmark">✓</span>Swim Practice Scanner</h2>
+                    <p class="screen-subtitle">Track your sets and practices by simply taking a picture! Never lose a workout again.</p>
+                </div>
+                <div class="button-container">
+                    <div class="dots-container">
+                        <div class="dot"></div>
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <button class="primary-button" onclick="nextScreen()">Next</button>
+                    <button class="skip-button" onclick="skipOnboarding()">Skip</button>
+                </div>
+            </div>
+
+            <!-- SCREEN 2: Marketplace -->
+            <div class="screen" id="screen2">
+                <div class="screen-content">
+                    <div class="feature-icon">🛒</div>
+                    <h2 class="screen-title"><span class="checkmark">✓</span>Product Marketplace Access</h2>
+                    <p class="screen-subtitle">Hire a professional swim coach. Purchase sets and technique analysis from the world's best coaches.</p>
+                </div>
+                <div class="button-container">
+                    <div class="dots-container">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <button class="primary-button" onclick="nextScreen()">Next</button>
+                    <button class="skip-button" onclick="skipOnboarding()">Skip</button>
+                </div>
+            </div>
+
+            <!-- SCREEN 3: AI Generator -->
+            <div class="screen" id="screen3">
+                <div class="screen-content">
+                    <div class="feature-icon">🤖</div>
+                    <h2 class="screen-title"><span class="checkmark">✓</span>AI Practice Set Generator</h2>
+                    <p class="screen-subtitle">Create personalized practice sets using Swimnerd AI. Tailored to your goals and abilities.</p>
+                </div>
+                <div class="button-container">
+                    <div class="dots-container">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <button class="primary-button" onclick="nextScreen()">Next</button>
+                    <button class="skip-button" onclick="skipOnboarding()">Skip</button>
+                </div>
+            </div>
+
+            <!-- SCREEN 4: Community -->
+            <div class="screen" id="screen4">
+                <div class="screen-content">
+                    <div class="feature-icon">💬</div>
+                    <h2 class="screen-title"><span class="checkmark">✓</span>Community Chat</h2>
+                    <p class="screen-subtitle">Connect and chat with other swimmers and coaches. Share tips, celebrate wins, and grow together.</p>
+                </div>
+                <div class="button-container">
+                    <div class="dots-container">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot active"></div>
+                    </div>
+                    <button class="primary-button" onclick="finishOnboarding()">Let's Go!</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let currentScreen = 0;
+        const totalScreens = 5;
+
+        function updateProgress() {
+            const progress = (currentScreen / (totalScreens - 1)) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function nextScreen() {
+            if (currentScreen < totalScreens - 1) {
+                document.getElementById('screen' + currentScreen).classList.remove('active');
+                currentScreen++;
+                document.getElementById('screen' + currentScreen).classList.add('active');
+                updateProgress();
+            }
+        }
+
+        function skipOnboarding() {
+            alert('Onboarding skipped! Taking you to the app...');
+            // In real app: navigate to main app screen
+        }
+
+        function finishOnboarding() {
+            alert('Onboarding complete! Welcome to Swimnerd!');
+            // In real app: navigate to main app screen
+        }
+
+        updateProgress();
+    </script>
+</body>
+</html>
