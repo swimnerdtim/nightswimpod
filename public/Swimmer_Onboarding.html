@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swimnerd - Mobile App Onboarding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .phone-container {
+            width: 375px;
+            height: 812px;
+            background: #1a1a1a;
+            border-radius: 45px;
+            padding: 12px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+            position: relative;
+            border: 3px solid #2a2a2a;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 35px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Dynamic Island */
+        .dynamic-island {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 30px;
+            background: #000;
+            border-radius: 20px;
+            z-index: 1000;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            position: absolute;
+            top: 55px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #e0e0e0;
+            z-index: 999;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Screen Container */
+        .screen {
+            display: none;
+            height: 100%;
+            padding: 80px 30px 30px 30px;
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+
+        .screen.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Back Button */
+        .back-button {
+            position: absolute;
+            top: 65px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Screen Content */
+        .screen-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .screen-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        .options-container {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        /* Option Buttons */
+        .option {
+            background: #f5f5f5;
+            border: 2px solid transparent;
+            padding: 18px 20px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .option:hover {
+            background: #e8e8e8;
+        }
+
+        .option.selected {
+            background: #2a2a2a;
+            color: white;
+            border-color: #2a2a2a;
+        }
+
+        .option-icon {
+            font-size: 20px;
+        }
+
+        .option-label {
+            flex: 1;
+            font-weight: 500;
+        }
+
+        .option-sublabel {
+            font-size: 14px;
+            color: #999;
+            margin-top: 4px;
+        }
+
+        .option.selected .option-sublabel {
+            color: #ccc;
+        }
+
+        /* Checkbox Multi-Select */
+        .option.checkbox::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            margin-right: 12px;
+        }
+
+        .option.checkbox.selected::before {
+            background: white;
+            border-color: white;
+            content: '✓';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2a2a2a;
+            font-weight: bold;
+        }
+
+        /* Input Fields */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        /* Scroll Pickers */
+        .scroll-picker-container {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .scroll-picker {
+            flex: 1;
+            height: 200px;
+            overflow-y: scroll;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 10px;
+        }
+
+        .picker-option {
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-bottom: 4px;
+        }
+
+        .picker-option:hover {
+            background: #f5f5f5;
+        }
+
+        .picker-option.selected {
+            background: #2a2a2a;
+            color: white;
+        }
+
+        /* Continue Button */
+        .continue-button {
+            width: 100%;
+            padding: 18px;
+            background: #2a2a2a;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: auto;
+        }
+
+        .continue-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .continue-button:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Landing Screen Specific */
+        .landing-screen {
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .landing-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 100px 30px 30px 30px;
+        }
+
+        .landing-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .landing-subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .camera-demo {
+            width: 280px;
+            height: 380px;
+            background: #000;
+            border-radius: 20px;
+            margin: 0 auto 40px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .workout-paper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-2deg);
+            width: 200px;
+            height: 260px;
+            background: #f5f5dc;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+
+        .scan-corners {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 220px;
+            height: 280px;
+            pointer-events: none;
+        }
+
+        .corner {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 3px solid #00ff88;
+            filter: drop-shadow(0 0 8px rgba(0,255,136,0.6));
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .corner.top-left {
+            top: 0;
+            left: 0;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .corner.top-right {
+            top: 0;
+            right: 0;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .corner.bottom-left {
+            bottom: 0;
+            left: 0;
+            border-right: none;
+            border-top: none;
+        }
+
+        .corner.bottom-right {
+            bottom: 0;
+            right: 0;
+            border-left: none;
+            border-top: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .scan-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            animation: scan 2s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: 30%; }
+            100% { top: 70%; }
+        }
+
+        .cta-button {
+            background: white;
+            color: #2a2a2a;
+        }
+
+        .secondary-link {
+            text-align: center;
+            margin-top: 16px;
+            color: white;
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
+        /* Toggle Switch */
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .toggle-switch {
+            width: 60px;
+            height: 32px;
+            background: #ccc;
+            border-radius: 16px;
+            position: relative;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .toggle-switch.active {
+            background: #2a2a2a;
+        }
+
+        .toggle-slider {
+            width: 28px;
+            height: 28px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s;
+        }
+
+        .toggle-switch.active .toggle-slider {
+            transform: translateX(28px);
+        }
+
+        .toggle-label {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .toggle-label.inactive {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <div class="dynamic-island"></div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <!-- SCREEN 0: Landing Page -->
+            <div class="screen landing-screen active" id="screen0">
+                <div class="landing-content">
+                    <h1 class="landing-title">Stop losing your best workouts</h1>
+                    <p class="landing-subtitle">Snap a photo. Save it forever. Share with your team.</p>
+                    
+                    <div class="camera-demo">
+                        <div class="workout-paper">
+                            <div style="text-decoration: underline; font-weight: bold; margin-bottom: 10px;">MAIN SET</div>
+                            Warm up:<br>
+                            400 swim<br>
+                            8x50 kick @ :50<br>
+                            <br>
+                            Main:<br>
+                            10x100 Free @ 1:30<br>
+                            Desc 1-5<br>
+                            Build 6-10<br>
+                            <br>
+                            6x50 @ :45<br>
+                            ALL OUT
+                        </div>
+                        <div class="scan-corners">
+                            <div class="corner top-left"></div>
+                            <div class="corner top-right"></div>
+                            <div class="corner bottom-left"></div>
+                            <div class="corner bottom-right"></div>
+                        </div>
+                        <div class="scan-line"></div>
+                    </div>
+
+                    <button class="continue-button cta-button" onclick="nextScreen()">Get Started</button>
+                    <div class="secondary-link">Already have an account? Sign In</div>
+                </div>
+            </div>
+
+            <!-- SCREEN 1: Gender -->
+            <div class="screen" id="screen1">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">Choose your Gender</h2>
+                <p class="screen-subtitle">This helps us show accurate event standards and age group times.</p>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, 'gender')">
+                        <span class="option-label">Male</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'gender')">
+                        <span class="option-label">Female</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'gender')">
+                        <span class="option-label">Other</span>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn1" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 2: Experience Level -->
+            <div class="screen" id="screen2">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">What's your experience level?</h2>
+                <p class="screen-subtitle">This helps us match practices to your skill level.</p>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, 'experience')">
+                        <span class="option-icon">🏊‍♂️</span>
+                        <div>
+                            <div class="option-label">Beginner</div>
+                            <div class="option-sublabel">Still learning the basics</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'experience')">
+                        <span class="option-icon">🏊</span>
+                        <div>
+                            <div class="option-label">Intermediate</div>
+                            <div class="option-sublabel">Comfortable with all strokes</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'experience')">
+                        <span class="option-icon">🏆</span>
+                        <div>
+                            <div class="option-label">Advanced / Competitive</div>
+                            <div class="option-sublabel">Racing regularly</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn2" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 3: Swim Frequency -->
+            <div class="screen" id="screen3">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">How many times do you swim per week?</h2>
+                <p class="screen-subtitle">This will be used to calibrate your custom plan.</p>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, 'frequency')">
+                        <span class="option-icon">🏊‍♂️</span>
+                        <div>
+                            <div class="option-label">0-2</div>
+                            <div class="option-sublabel">Recreational swimmer</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'frequency')">
+                        <span class="option-icon">🏊</span>
+                        <div>
+                            <div class="option-label">3-5</div>
+                            <div class="option-sublabel">Competitive swimmer</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'frequency')">
+                        <span class="option-icon">🏊‍♀️</span>
+                        <div>
+                            <div class="option-label">6+</div>
+                            <div class="option-sublabel">Dedicated athlete</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn3" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 4: Attribution -->
+            <div class="screen" id="screen4">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">Where did you hear about us?</h2>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, 'attribution')">
+                        <span class="option-icon">📺</span>
+                        <span class="option-label">TV</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'attribution')">
+                        <span class="option-icon">👥</span>
+                        <span class="option-label">Friend or family</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'attribution')">
+                        <span class="option-icon">📸</span>
+                        <span class="option-label">Instagram</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'attribution')">
+                        <span class="option-icon">👤</span>
+                        <span class="option-label">Facebook</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'attribution')">
+                        <span class="option-icon">🏪</span>
+                        <span class="option-label">App Store</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'attribution')">
+                        <span class="option-icon">✖️</span>
+                        <span class="option-label">X (Twitter)</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'attribution')">
+                        <span class="option-icon">🎙️</span>
+                        <span class="option-label">Night Swim Podcast</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'attribution')">
+                        <span class="option-icon">🏊</span>
+                        <span class="option-label">My coach</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'attribution')">
+                        <span class="option-icon">🏊‍♂️</span>
+                        <span class="option-label">Teammate</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'attribution')">
+                        <span class="option-icon">🌐</span>
+                        <span class="option-label">Google / Web search</span>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn4" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 5: Height & Weight -->
+            <div class="screen" id="screen5">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">Height & Weight</h2>
+                <p class="screen-subtitle">This will be used to calibrate your custom plan.</p>
+                <div class="options-container">
+                    <div class="toggle-container">
+                        <span class="toggle-label" id="imperialLabel">Imperial</span>
+                        <div class="toggle-switch" id="unitToggle" onclick="toggleUnits()">
+                            <div class="toggle-slider"></div>
+                        </div>
+                        <span class="toggle-label inactive" id="metricLabel">Metric</span>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Height</label>
+                        <input type="text" class="input-field" placeholder='5\'10"' id="heightInput">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Weight</label>
+                        <input type="text" class="input-field" placeholder="165 lbs" id="weightInput">
+                    </div>
+                </div>
+                <button class="continue-button" id="btn5" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 6: Birthdate -->
+            <div class="screen" id="screen6">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">When were you born?</h2>
+                <p class="screen-subtitle">This will be used to calibrate your custom plan.</p>
+                <div class="options-container">
+                    <div class="input-group">
+                        <label class="input-label">Date of Birth</label>
+                        <input type="date" class="input-field" id="birthdateInput">
+                    </div>
+                </div>
+                <button class="continue-button" id="btn6" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 7: Have Coach -->
+            <div class="screen" id="screen7">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">Do you currently work with a personal swim coach?</h2>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, 'hasCoach')">
+                        <span class="option-label">Yes</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'hasCoach')">
+                        <span class="option-label">No</span>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn7" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 8: Emotional Goal -->
+            <div class="screen" id="screen8">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">What would you like to accomplish?</h2>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, 'emotionalGoal')">
+                        <span class="option-icon">🏊‍♂️</span>
+                        <span class="option-label">Get faster and stronger</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'emotionalGoal')">
+                        <span class="option-icon">⚡</span>
+                        <span class="option-label">Build confidence in the water</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'emotionalGoal')">
+                        <span class="option-icon">💪</span>
+                        <span class="option-label">Stay motivated and consistent</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'emotionalGoal')">
+                        <span class="option-icon">🏆</span>
+                        <span class="option-label">Feel proud of my swimming</span>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn8" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 9: Distance Preference -->
+            <div class="screen" id="screen9">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">What distances do you prefer?</h2>
+                <p class="screen-subtitle">This helps us tailor your training.</p>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, 'distance')">
+                        <span class="option-icon">⚡</span>
+                        <div>
+                            <div class="option-label">Sprint (50s/100s)</div>
+                            <div class="option-sublabel">All-out speed</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'distance')">
+                        <span class="option-icon">🏊‍♂️</span>
+                        <div>
+                            <div class="option-label">Middle Distance (200s/500s)</div>
+                            <div class="option-sublabel">Balance of speed & endurance</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'distance')">
+                        <span class="option-icon">🏊</span>
+                        <div>
+                            <div class="option-label">Distance (500+/1650+)</div>
+                            <div class="option-sublabel">Aerobic endurance</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'distance')">
+                        <span class="option-icon">🌊</span>
+                        <div>
+                            <div class="option-label">Open Water (1K+)</div>
+                            <div class="option-sublabel">Long continuous swimming</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'distance')">
+                        <span class="option-icon">🎯</span>
+                        <div>
+                            <div class="option-label">IM (200/400 IM)</div>
+                            <div class="option-sublabel">All strokes, varied pacing</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn9" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 10: Strokes (Multi-select) -->
+            <div class="screen" id="screen10">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">What strokes do you swim?</h2>
+                <p class="screen-subtitle">Select all that apply</p>
+                <div class="options-container">
+                    <div class="option checkbox" onclick="selectMultiple(this, 'strokes')">
+                        <span class="option-label">Freestyle</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'strokes')">
+                        <span class="option-label">Backstroke</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'strokes')">
+                        <span class="option-label">Breaststroke</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'strokes')">
+                        <span class="option-label">Butterfly</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'strokes')">
+                        <span class="option-label">I only swim freestyle</span>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn10" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 11: Favorite Stroke -->
+            <div class="screen" id="screen11">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">Which stroke is your favorite?</h2>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, 'favoriteStroke')">
+                        <span class="option-icon">🏊‍♂️</span>
+                        <span class="option-label">Freestyle</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'favoriteStroke')">
+                        <span class="option-icon">🏊‍♀️</span>
+                        <span class="option-label">Backstroke</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'favoriteStroke')">
+                        <span class="option-icon">🏊</span>
+                        <span class="option-label">Breaststroke</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'favoriteStroke')">
+                        <span class="option-icon">🦋</span>
+                        <span class="option-label">Butterfly</span>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn11" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 12: Worst Stroke -->
+            <div class="screen" id="screen12">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">Which stroke needs the most work?</h2>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, 'worstStroke')">
+                        <span class="option-icon">🏊‍♂️</span>
+                        <span class="option-label">Freestyle</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'worstStroke')">
+                        <span class="option-icon">🏊‍♀️</span>
+                        <span class="option-label">Backstroke</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'worstStroke')">
+                        <span class="option-icon">🏊</span>
+                        <span class="option-label">Breaststroke</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'worstStroke')">
+                        <span class="option-icon">🦋</span>
+                        <span class="option-label">Butterfly</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'worstStroke')">
+                        <span class="option-icon">✨</span>
+                        <span class="option-label">All are pretty solid</span>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn12" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 13: How Get Workouts -->
+            <div class="screen" id="screen13">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">How do you usually get your workouts?</h2>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, 'workoutSource')">
+                        <span class="option-icon">🏊‍♂️</span>
+                        <div>
+                            <div class="option-label">From my coach</div>
+                            <div class="option-sublabel">Team/group practice</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'workoutSource')">
+                        <span class="option-icon">🧠</span>
+                        <div>
+                            <div class="option-label">I make them up myself</div>
+                            <div class="option-sublabel">Wing it each session</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'workoutSource')">
+                        <span class="option-icon">📱</span>
+                        <div>
+                            <div class="option-label">Find them online</div>
+                            <div class="option-sublabel">Blogs, YouTube, Instagram</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'workoutSource')">
+                        <span class="option-icon">📲</span>
+                        <div>
+                            <div class="option-label">Use another app</div>
+                            <div class="option-sublabel">Different training app</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'workoutSource')">
+                        <span class="option-icon">🤷</span>
+                        <div>
+                            <div class="option-label">I don't follow structured workouts</div>
+                            <div class="option-sublabel">Just swim laps</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn13" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 14: How Follow Sets -->
+            <div class="screen" id="screen14">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">How do you like to follow sets?</h2>
+                <p class="screen-subtitle">We'll optimize the display for your preference.</p>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, 'followMethod')">
+                        <span class="option-icon">⌚</span>
+                        <div>
+                            <div class="option-label">On my smartwatch</div>
+                            <div class="option-sublabel">Apple Watch, Garmin</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'followMethod')">
+                        <span class="option-icon">📱</span>
+                        <div>
+                            <div class="option-label">Phone on the pool deck</div>
+                            <div class="option-sublabel">Check between sets</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'followMethod')">
+                        <span class="option-icon">📄</span>
+                        <div>
+                            <div class="option-label">Printed on paper</div>
+                            <div class="option-sublabel">Waterproof card</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'followMethod')">
+                        <span class="option-icon">🧠</span>
+                        <div>
+                            <div class="option-label">Memorize before practice</div>
+                            <div class="option-sublabel">Quick glance then go</div>
+                        </div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'followMethod')">
+                        <span class="option-icon">🏊‍♂️</span>
+                        <div>
+                            <div class="option-label">Whiteboard at the pool</div>
+                            <div class="option-sublabel">Traditional team style</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn14" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 15: Equipment (Multi-select) -->
+            <div class="screen" id="screen15">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">What equipment do you currently use?</h2>
+                <p class="screen-subtitle">Select all that apply</p>
+                <div class="options-container">
+                    <div class="option checkbox" onclick="selectMultiple(this, 'equipment')">
+                        <span class="option-icon">🥽</span>
+                        <span class="option-label">Goggles (obviously)</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'equipment')">
+                        <span class="option-icon">⏱️</span>
+                        <span class="option-label">Pace clock / Tempo trainer</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'equipment')">
+                        <span class="option-icon">🦶</span>
+                        <span class="option-label">Fins (for kick sets)</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'equipment')">
+                        <span class="option-icon">🏊</span>
+                        <span class="option-label">Kickboard</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'equipment')">
+                        <span class="option-icon">🖐️</span>
+                        <span class="option-label">Paddles (hand paddles)</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'equipment')">
+                        <span class="option-icon">🎈</span>
+                        <span class="option-label">Pull buoy</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'equipment')">
+                        <span class="option-icon">🏊‍♂️</span>
+                        <span class="option-label">Snorkel (center-mount)</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'equipment')">
+                        <span class="option-icon">📊</span>
+                        <span class="option-label">Resistance bands / stretch cords</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'equipment')">
+                        <span class="option-icon">⌚</span>
+                        <span class="option-label">Smartwatch (Apple Watch, Garmin, etc.)</span>
+                    </div>
+                    <div class="option checkbox" onclick="selectMultiple(this, 'equipment')">
+                        <span class="option-icon">🚫</span>
+                        <span class="option-label">None of the above (just goggles)</span>
+                    </div>
+                </div>
+                <button class="continue-button" disabled id="btn15" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 16: SwimCloud/USMS ID -->
+            <div class="screen" id="screen16">
+                <button class="back-button" onclick="prevScreen()">←</button>
+                <h2 class="screen-title">Import your times</h2>
+                <p class="screen-subtitle">Connect your SwimCloud or USMS account to automatically import your best times.</p>
+                <div class="options-container">
+                    <div class="input-group">
+                        <label class="input-label">SwimCloud ID (optional)</label>
+                        <input type="text" class="input-field" placeholder="e.g., 166348" id="swimcloudInput">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">USMS ID (optional)</label>
+                        <input type="text" class="input-field" placeholder="e.g., 123-ABC" id="usmsInput">
+                    </div>
+                    <p style="font-size: 14px; color: #666; margin-top: 10px;">Don't have one? No problem - you can add times manually later.</p>
+                </div>
+                <button class="continue-button" id="btn16" onclick="nextScreen()">Continue</button>
+            </div>
+
+            <!-- SCREEN 17: Paywall -->
+            <div class="screen" id="screen17">
+                <h2 class="screen-title" style="text-align: center;">Start Your Free Trial</h2>
+                <p class="screen-subtitle" style="text-align: center;">7 days free, then choose your plan</p>
+                <div class="options-container">
+                    <div class="option" style="flex-direction: column; align-items: flex-start; padding: 24px; background: #f9f9f9; border: 3px solid #667eea;">
+                        <div style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 8px;">
+                            <span style="font-weight: 700; font-size: 18px;">Yearly</span>
+                            <span style="background: #667eea; color: white; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600;">BEST VALUE</span>
+                        </div>
+                        <div style="font-size: 32px; font-weight: 700; margin-bottom: 4px;">$79.99/year</div>
+                        <div style="font-size: 14px; color: #666;">Just $6.67/month</div>
+                    </div>
+
+                    <div class="option" style="flex-direction: column; align-items: flex-start; padding: 24px; margin-top: 16px;">
+                        <div style="font-weight: 700; font-size: 18px; margin-bottom: 8px;">Monthly</div>
+                        <div style="font-size: 32px; font-weight: 700; margin-bottom: 4px;">$9.99/month</div>
+                        <div style="font-size: 14px; color: #666;">Billed monthly</div>
+                    </div>
+
+                    <div style="margin-top: 30px; padding: 20px; background: #f0f8ff; border-radius: 12px;">
+                        <div style="font-weight: 600; margin-bottom: 12px;">What you get:</div>
+                        <div style="font-size: 14px; line-height: 2;">
+                            ✅ AI practice generator<br>
+                            ✅ Unlimited workout library<br>
+                            ✅ Championship pacing models<br>
+                            ✅ Progress tracking & analytics<br>
+                            ✅ Pro workout archive (Brett Hawke)<br>
+                            ✅ Export & share with your team
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px; font-size: 12px; color: #999; text-align: center; line-height: 1.6;">
+                        Free for 7 days. Cancel anytime before trial ends.<br>
+                        We'll remind you 24 hours before charging.
+                    </div>
+                </div>
+                <button class="continue-button" onclick="finishOnboarding()">Start Free Trial</button>
+            </div>
+
+            <!-- SCREEN 18: Success -->
+            <div class="screen" id="screen18">
+                <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                    <div style="font-size: 80px; margin-bottom: 20px;">🎉</div>
+                    <h2 class="screen-title">You're all set!</h2>
+                    <p class="screen-subtitle">Let's start building your swimming future.</p>
+                </div>
+                <button class="continue-button">Go to Dashboard</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let currentScreen = 0;
+        const totalScreens = 18;
+        const userData = {};
+
+        function updateProgress() {
+            const progress = (currentScreen / totalScreens) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function nextScreen() {
+            if (currentScreen < totalScreens) {
+                document.getElementById('screen' + currentScreen).classList.remove('active');
+                currentScreen++;
+                document.getElementById('screen' + currentScreen).classList.add('active');
+                updateProgress();
+                window.scrollTo(0, 0);
+            }
+        }
+
+        function prevScreen() {
+            if (currentScreen > 0) {
+                document.getElementById('screen' + currentScreen).classList.remove('active');
+                currentScreen--;
+                document.getElementById('screen' + currentScreen).classList.add('active');
+                updateProgress();
+                window.scrollTo(0, 0);
+            }
+        }
+
+        function selectOption(element, group) {
+            // Deselect all in group
+            const options = element.parentElement.querySelectorAll('.option:not(.checkbox)');
+            options.forEach(opt => opt.classList.remove('selected'));
+            
+            // Select this one
+            element.classList.add('selected');
+            
+            // Enable continue button
+            const btnId = 'btn' + currentScreen;
+            const btn = document.getElementById(btnId);
+            if (btn) btn.disabled = false;
+            
+            // Store data
+            userData[group] = element.querySelector('.option-label').textContent.trim();
+        }
+
+        function selectMultiple(element, group) {
+            element.classList.toggle('selected');
+            
+            // Check if any selected
+            const parent = element.parentElement;
+            const anySelected = parent.querySelector('.option.checkbox.selected');
+            
+            const btnId = 'btn' + currentScreen;
+            const btn = document.getElementById(btnId);
+            if (btn) btn.disabled = !anySelected;
+            
+            // Store data
+            const selected = Array.from(parent.querySelectorAll('.option.checkbox.selected'))
+                .map(el => el.querySelector('.option-label').textContent.trim());
+            userData[group] = selected;
+        }
+
+        function toggleUnits() {
+            const toggle = document.getElementById('unitToggle');
+            const imperialLabel = document.getElementById('imperialLabel');
+            const metricLabel = document.getElementById('metricLabel');
+            const heightInput = document.getElementById('heightInput');
+            const weightInput = document.getElementById('weightInput');
+            
+            toggle.classList.toggle('active');
+            
+            if (toggle.classList.contains('active')) {
+                imperialLabel.classList.add('inactive');
+                metricLabel.classList.remove('inactive');
+                heightInput.placeholder = '178 cm';
+                weightInput.placeholder = '75 kg';
+            } else {
+                imperialLabel.classList.remove('inactive');
+                metricLabel.classList.add('inactive');
+                heightInput.placeholder = '5\'10"';
+                weightInput.placeholder = '165 lbs';
+            }
+        }
+
+        function finishOnboarding() {
+            console.log('User data collected:', userData);
+            nextScreen();
+        }
+
+        // Initialize
+        updateProgress();
+    </script>
+</body>
+</html>

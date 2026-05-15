@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Onboarding - Swimnerd AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .screen {
+            display: none;
+            padding: 40px;
+            min-height: 500px;
+        }
+
+        .screen.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            color: #4a5568;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #2d3748;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .checkbox-group {
+            margin-bottom: 16px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .checkbox-item:hover {
+            border-color: #667eea;
+            background: #f7fafc;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 12px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .radio-item:hover {
+            border-color: #667eea;
+            background: #f7fafc;
+        }
+
+        .radio-item input[type="radio"] {
+            margin-right: 12px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 24px;
+            transition: transform 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .button-secondary {
+            background: #e2e8f0;
+            color: #2d3748;
+            margin-top: 12px;
+        }
+
+        .progress {
+            height: 4px;
+            background: #e2e8f0;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li:before {
+            content: "•";
+            color: #667eea;
+            font-size: 24px;
+            margin-right: 12px;
+        }
+
+        .final-steps {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .final-steps h3 {
+            color: #2d3748;
+            margin-bottom: 12px;
+        }
+
+        .final-steps ol {
+            margin-left: 20px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        .note {
+            background: #fff5e6;
+            border-left: 4px solid #f6ad55;
+            padding: 12px;
+            margin: 16px 0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #744210;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Screen 1: Welcome Hero -->
+        <div class="screen active" id="screen1">
+            <div class="hero-image">📸➡️📊</div>
+            <h1>Track your practices with just a picture</h1>
+            <p>Snap a photo of your whiteboard. Swimnerd AI reads it, organizes it, and learns YOUR coaching style.</p>
+            <p>The more you use it, the smarter it gets.</p>
+            <ul class="feature-list">
+                <li>Generate new practices in your voice</li>
+                <li>Search your workout library instantly</li>
+                <li>See patterns in your programming</li>
+                <li>Save hours every week</li>
+            </ul>
+            <button class="button" onclick="nextScreen(2)">Get Started</button>
+        </div>
+
+        <!-- Screen 2: Create Profile -->
+        <div class="screen" id="screen2">
+            <div class="progress"><div class="progress-bar" style="width: 9%"></div></div>
+            <h2>Let's set up your profile</h2>
+            
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Enter your first name">
+            </div>
+            
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter your last name">
+            </div>
+            
+            <div class="grid-3">
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <select>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Language</label>
+                    <select>
+                        <option>English</option>
+                        <option>Spanish</option>
+                        <option>French</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Bio (optional)</label>
+                <textarea placeholder="Tell us a bit about yourself..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Accolades (optional)</label>
+                <textarea placeholder="Any notable achievements..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Certifications (optional)</label>
+                <textarea placeholder="Coaching certifications..."></textarea>
+            </div>
+            
+            <button class="button" onclick="nextScreen(3)">Next</button>
+        </div>
+
+        <!-- Screen 3: Number of Teams -->
+        <div class="screen" id="screen3">
+            <div class="progress"><div class="progress-bar" style="width: 18%"></div></div>
+            <h2>How many teams do you currently coach?</h2>
+            
+            <div class="radio-group">
+                <label class="radio-item">
+                    <input type="radio" name="teams" value="1">
+                    <span>Just one team</span>
+                </label>
+                <label class="radio-item">
+                    <input type="radio" name="teams" value="2">
+                    <span>2 teams</span>
+                </label>
+                <label class="radio-item">
+                    <input type="radio" name="teams" value="3">
+                    <span>3 teams</span>
+                </label>
+                <label class="radio-item">
+                    <input type="radio" name="teams" value="4+">
+                    <span>4+ teams</span>
+                </label>
+            </div>
+            
+            <button class="button" onclick="nextScreen(4)">Next</button>
+        </div>
+
+        <!-- Screen 4: Primary Team Setup -->
+        <div class="screen" id="screen4">
+            <div class="progress"><div class="progress-bar" style="width: 27%"></div></div>
+            <h2>Tell us about your primary team</h2>
+            <p class="note">You can add your other teams later in Settings</p>
+            
+            <div class="form-group">
+                <label>Team Name (optional)</label>
+                <input type="text" placeholder="e.g., Tidewater Age Group">
+            </div>
+            
+            <div class="form-group">
+                <label>Team Type</label>
+                <select>
+                    <option>Age Group</option>
+                    <option>High School</option>
+                    <option>Club (multi-age)</option>
+                    <option>College</option>
+                    <option>Masters</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Competitive Level</label>
+                <select>
+                    <option>Recreational</option>
+                    <option>Competitive</option>
+                    <option>Elite</option>
+                    <option>National/International</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Team Size</label>
+                <select>
+                    <option>1-10 swimmers</option>
+                    <option>11-25 swimmers</option>
+                    <option>26-50 swimmers</option>
+                    <option>51-100 swimmers</option>
+                    <option>100+ swimmers</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Primary Pool</label>
+                <select>
+                    <option>SCY (25 yards)</option>
+                    <option>SCM (25 meters)</option>
+                    <option>LCM (50 meters)</option>
+                    <option>Multiple pools</option>
+                </select>
+            </div>
+            
+            <button class="button" onclick="nextScreen(5)">Next</button>
+        </div>
+
+        <!-- Screen 5: Season Structure -->
+        <div class="screen" id="screen5">
+            <div class="progress"><div class="progress-bar" style="width: 36%"></div></div>
+            <h2>How do you structure your season?</h2>
+            
+            <div class="form-group">
+                <label>Season Model</label>
+                <select>
+                    <option>Single peak (one championship meet)</option>
+                    <option>Double peak (two major meets)</option>
+                    <option>Multi-peak (several important meets)</option>
+                    <option>Year-round (no distinct peaks)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Typical Season Length</label>
+                <select>
+                    <option>12 weeks</option>
+                    <option>16 weeks</option>
+                    <option>20 weeks</option>
+                    <option>24+ weeks</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Current Phase</label>
+                <select>
+                    <option>Base building</option>
+                    <option>Build/intensity</option>
+                    <option>Pre-taper</option>
+                    <option>Taper</option>
+                    <option>Off-season/transition</option>
+                </select>
+            </div>
+            
+            <button class="button" onclick="nextScreen(6)">Next</button>
+        </div>
+
+        <!-- Screen 6: Training Philosophy -->
+        <div class="screen" id="screen6">
+            <div class="progress"><div class="progress-bar" style="width: 45%"></div></div>
+            <h2>What's your coaching philosophy?</h2>
+            <p>Select all that apply:</p>
+            
+            <div class="checkbox-group">
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>High volume, aerobic base</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Quality over quantity</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Race-pace focused</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Technique-driven</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>USRPT / race-specific training</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Traditional periodization</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Mix of everything</span>
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label>Describe your approach (optional)</label>
+                <textarea placeholder="In 1-2 sentences, what drives your coaching?"></textarea>
+            </div>
+            
+            <button class="button" onclick="nextScreen(7)">Next</button>
+        </div>
+
+        <!-- Screen 7: Practice Structure -->
+        <div class="screen" id="screen7">
+            <div class="progress"><div class="progress-bar" style="width: 54%"></div></div>
+            <h2>How do you run practices?</h2>
+            
+            <div class="form-group">
+                <label>Typical Practice Length</label>
+                <select>
+                    <option>60 minutes</option>
+                    <option>75 minutes</option>
+                    <option>90 minutes</option>
+                    <option>2 hours</option>
+                    <option>2+ hours</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Warmup Style</label>
+                <select>
+                    <option>Traditional (swim, kick, drill progression)</option>
+                    <option>Short & race-focused</option>
+                    <option>Long aerobic</option>
+                    <option>Varies by day</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Main Set Priorities (check your top 3):</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        <span>Aerobic conditioning</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        <span>Threshold/lactate training</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        <span>Speed/power</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        <span>Technique work</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        <span>Race-specific sets</span>
+                    </label>
+                </div>
+            </div>
+            
+            <button class="button" onclick="nextScreen(8)">Next</button>
+        </div>
+
+        <!-- Screen 8: Go-To Sets -->
+        <div class="screen" id="screen8">
+            <div class="progress"><div class="progress-bar" style="width: 63%"></div></div>
+            <h2>What types of sets do you use most?</h2>
+            <p>Select your favorites:</p>
+            
+            <div class="checkbox-group">
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Straight sets (ex: 10 x 100)</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Descending sets</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>IM/stroke variety</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Broken swims / segmented racing</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Pull sets</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Kick sets</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Sprint sets</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Distance sets</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Vertical kicking</span>
+                </label>
+            </div>
+            
+            <button class="button" onclick="nextScreen(9)">Next</button>
+        </div>
+
+        <!-- Screen 9: Intervals & Pacing -->
+        <div class="screen" id="screen9">
+            <div class="progress"><div class="progress-bar" style="width: 72%"></div></div>
+            <h2>How do you approach intervals and pacing?</h2>
+            
+            <div class="form-group">
+                <label>Interval Style</label>
+                <select>
+                    <option>Tight intervals (build speed under fatigue)</option>
+                    <option>Moderate rest (quality reps)</option>
+                    <option>Generous rest (maximum quality)</option>
+                    <option>Varies by set purpose</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Pacing Method (select all you use):</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        <span>Pace clock/send-offs (specific times)</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        <span>Effort-based (easy/moderate/hard)</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        <span>Heart rate zones</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        <span>Mix of methods</span>
+                    </label>
+                </div>
+            </div>
+            
+            <button class="button" onclick="nextScreen(10)">Next</button>
+        </div>
+
+        <!-- Screen 10: Goals for AI -->
+        <div class="screen" id="screen10">
+            <div class="progress"><div class="progress-bar" style="width: 81%"></div></div>
+            <h2>What do you want Swimnerd AI to help with?</h2>
+            <p>Select all that apply:</p>
+            
+            <div class="checkbox-group">
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Generate daily practices</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Save time on practice planning</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Get fresh set ideas</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Learn new training methods</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Maintain consistency in programming</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Better progression/periodization</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>Track patterns in my workouts</span>
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label>Anything else? (optional)</label>
+                <textarea placeholder="Tell us more..."></textarea>
+            </div>
+            
+            <button class="button" onclick="nextScreen(11)">Next</button>
+        </div>
+
+        <!-- Screen 11: You're All Set! -->
+        <div class="screen" id="screen11">
+            <div class="progress"><div class="progress-bar" style="width: 100%"></div></div>
+            <h1>Your AI is ready to learn!</h1>
+            <p>We've created a baseline profile based on your answers.</p>
+            
+            <div class="final-steps">
+                <h3>Here's how it works:</h3>
+                <ol>
+                    <li><strong>📸 Upload practices</strong> - Snap photos of your workouts from the whiteboard</li>
+                    <li><strong>🧠 AI learns YOUR style</strong> - It studies your patterns, favorite sets, and structure</li>
+                    <li><strong>✨ Generate new practices</strong> - In your voice, based on your methodology</li>
+                </ol>
+            </div>
+            
+            <p style="margin-top: 20px;">The more you use it, the smarter it gets.</p>
+            
+            <p class="note">Want to add your other teams? Go to Settings → Teams anytime.</p>
+            
+            <button class="button" onclick="alert('Onboarding complete! Redirecting to app...')">Start Tracking Practices</button>
+        </div>
+    </div>
+
+    <script>
+        function nextScreen(screenNumber) {
+            // Hide all screens
+            const screens = document.querySelectorAll('.screen');
+            screens.forEach(screen => screen.classList.remove('active'));
+            
+            // Show target screen
+            document.getElementById('screen' + screenNumber).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
