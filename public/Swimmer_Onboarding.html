@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swimnerd Swimmer App - Onboarding</title>
+    <title>Swimnerd Swimmer App - Welcome</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
-            background: #0a0e27;
+            background: linear-gradient(180deg, #e6f4fa 0%, #cfe9f5 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -27,7 +27,7 @@
             background: #1a1a1a;
             border-radius: 45px;
             padding: 12px;
-            box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
             position: relative;
             border: 3px solid #2a2a2a;
         }
@@ -35,7 +35,7 @@
         .phone-screen {
             width: 100%;
             height: 100%;
-            background: #0a0e27;
+            background: linear-gradient(180deg, #e6f4fa 0%, #cfe9f5 100%);
             border-radius: 35px;
             overflow: hidden;
             position: relative;
@@ -58,270 +58,190 @@
             top: 55px;
             left: 0;
             right: 0;
-            height: 4px;
-            background: rgba(255,255,255,0.1);
+            height: 3px;
+            background: rgba(0,0,0,0.05);
             z-index: 999;
         }
 
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #f97316, #ea580c);
+            background: #0088cc;
             width: 0%;
             transition: width 0.3s ease;
         }
 
-        .screen {
-            display: none;
-            height: 100%;
-            padding: 80px 30px 100px 30px;
-            position: relative;
-            animation: slideIn 0.3s ease;
-        }
-
-        .screen.active {
-            display: flex;
-            flex-direction: column;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .landing-screen {
-            padding: 0;
-            background: #0a0e27;
-            color: white;
-        }
-
-        .landing-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            padding: 80px 30px 30px 30px;
-            align-items: center;
+        /* Header with logo */
+        .header {
+            padding: 70px 20px 20px 20px;
             text-align: center;
         }
 
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 40px;
-            background: white;
-            border-radius: 30px;
+        .logo-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
+            gap: 8px;
+            margin-bottom: 40px;
         }
 
-        .landing-title {
-            font-size: 36px;
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #0088cc;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-size: 24px;
             font-weight: 700;
-            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        /* Main content */
+        .content {
+            padding: 0 30px;
+            text-align: center;
+        }
+
+        .icon-card {
+            width: 140px;
+            height: 140px;
+            background: white;
+            border-radius: 30px;
+            margin: 0 auto 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .icon-card::before {
+            content: '↗';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 18px;
+            opacity: 0.3;
+        }
+
+        .water-icon {
+            width: 80px;
+            height: 80px;
+            background: #0088cc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+        }
+
+        .main-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
             line-height: 1.2;
         }
 
-        .landing-subtitle {
-            font-size: 18px;
-            margin-bottom: 50px;
-            opacity: 0.8;
-            line-height: 1.5;
+        .main-title .highlight {
+            color: #0088cc;
         }
 
-        .features-preview {
+        .subtitle {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        /* Buttons */
+        .button-container {
             display: flex;
             flex-direction: column;
-            gap: 16px;
-            margin-bottom: 40px;
-            width: 100%;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #0088cc;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background: #0077b3;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,136,204,0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #0088cc;
+            border: 2px solid #e0e0e0;
+        }
+
+        .btn-secondary:hover {
+            border-color: #0088cc;
+            transform: translateY(-2px);
+        }
+
+        .arrow {
+            font-size: 20px;
+        }
+
+        /* Feature preview (for subsequent screens) */
+        .features {
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 30px;
         }
 
         .feature-item {
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 16px;
-            background: rgba(255,255,255,0.05);
+            padding: 14px;
+            background: white;
             border-radius: 12px;
-            border-left: 3px solid #f97316;
+            text-align: left;
         }
 
         .feature-icon {
-            font-size: 28px;
+            width: 40px;
+            height: 40px;
+            background: #f0f9ff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
         }
 
         .feature-text {
-            text-align: left;
             font-size: 14px;
-            opacity: 0.9;
-        }
-
-        .continue-button {
-            width: calc(100% - 60px);
-            margin: 0 30px;
-            padding: 18px;
-            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-            color: white;
-            border: none;
-            border-radius: 14px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            position: absolute;
-            bottom: 30px;
-        }
-
-        .continue-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
-        }
-
-        .secondary-link {
-            text-align: center;
-            margin-top: 70px;
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .screen-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .screen-title {
-            font-size: 28px;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
-
-        .screen-subtitle {
-            font-size: 16px;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 40px;
-            line-height: 1.5;
-        }
-
-        .back-button {
-            position: absolute;
-            top: 70px;
-            left: 20px;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border: none;
-            border-radius: 12px;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-        }
-
-        .options-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .option {
-            padding: 16px 20px;
-            background: rgba(255,255,255,0.05);
-            border: 2px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .option:hover {
-            background: rgba(255,255,255,0.08);
-            border-color: #f97316;
-        }
-
-        .option.selected {
-            background: rgba(249, 115, 22, 0.15);
-            border-color: #f97316;
-        }
-
-        .option-icon {
-            font-size: 24px;
-        }
-
-        .option-label {
-            font-size: 16px;
-            color: white;
+            color: #333;
             font-weight: 500;
-        }
-
-        .option-sublabel {
-            font-size: 13px;
-            color: rgba(255,255,255,0.6);
-            margin-top: 4px;
-        }
-
-        .continue-button:disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-        }
-
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        .input-label {
-            display: block;
-            font-size: 14px;
-            font-weight: 500;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 8px;
-        }
-
-        .input-field {
-            width: 100%;
-            padding: 14px 16px;
-            background: rgba(255,255,255,0.05);
-            border: 2px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-            color: white;
-            font-size: 16px;
-        }
-
-        .input-field:focus {
-            outline: none;
-            border-color: #f97316;
-            background: rgba(255,255,255,0.08);
-        }
-
-        .checkbox {
-            position: relative;
-        }
-
-        .checkbox.selected::before {
-            content: "✓";
-            position: absolute;
-            right: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #f97316;
-            font-size: 20px;
-            font-weight: bold;
         }
     </style>
 </head>
@@ -333,54 +253,70 @@
                 <div class="progress-bar" id="progressBar"></div>
             </div>
 
-            <!-- SCREEN 0: Landing -->
-            <div class="screen landing-screen active" id="screen0">
-                <div class="landing-content">
-                    <div class="logo">🏊‍♂️</div>
-                    <h1 class="landing-title">Empower your swimming journey</h1>
-                    <p class="landing-subtitle">Access world-class coaches, AI support, and a vibrant community.</p>
-                    
-                    <div class="features-preview">
-                        <div class="feature-item">
-                            <div class="feature-icon">📸</div>
-                            <div class="feature-text">Track sets by taking a picture</div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🛒</div>
-                            <div class="feature-text">Hire world-class coaches & buy programs</div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🤖</div>
-                            <div class="feature-text">Generate personalized sets with AI</div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">💬</div>
-                            <div class="feature-text">Connect with swimmers & coaches</div>
-                        </div>
-                    </div>
-
-                    <a href="#" class="secondary-link">Already have an account? Sign In</a>
+            <div class="header">
+                <div class="logo-container">
+                    <div class="logo-icon">🏊</div>
+                    <div class="logo-text">swimnerd</div>
                 </div>
-                <button class="continue-button" onclick="nextScreen()">Get Started</button>
             </div>
 
-            <!-- Add all your other screens (gender, experience, etc.) here -->
-            <!-- Keeping just screen 0 for now to get approval on design -->
+            <div class="content">
+                <div class="icon-card">
+                    <div class="water-icon">🌊</div>
+                </div>
+
+                <h1 class="main-title">Train Smarter, <span class="highlight">Swim Faster</span></h1>
+                <p class="subtitle">The ultimate platform for swimmers to track progress, connect with coaches, and achieve their goals with AI-powered insights.</p>
+
+                <div class="button-container">
+                    <button class="btn btn-primary" onclick="nextScreen()">
+                        Start Your Journey
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="signIn()">
+                        Sign In
+                    </button>
+                </div>
+
+                <!-- Hidden for now, will show on next screens -->
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon">📸</div>
+                        <div class="feature-text">Track sets by taking a picture</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛒</div>
+                        <div class="feature-text">Hire world-class coaches</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🤖</div>
+                        <div class="feature-text">Generate personalized sets with AI</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💬</div>
+                        <div class="feature-text">Connect with swimmers & coaches</div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
 
     <script>
         let currentScreen = 0;
-        const totalScreens = 1; // Will be more when we add all screens back
 
         function updateProgress() {
-            const progress = (currentScreen / (totalScreens - 1)) * 100;
+            const progress = (currentScreen / 10) * 100;
             document.getElementById('progressBar').style.width = progress + '%';
         }
 
         function nextScreen() {
-            alert('Design approved? I\'ll add back all the other onboarding screens (gender, experience, etc.)');
+            alert('Onboarding continues... (gender, experience, etc.)');
+            // In real app: navigate to next onboarding screen
+        }
+
+        function signIn() {
+            alert('Navigate to sign in');
         }
 
         updateProgress();
