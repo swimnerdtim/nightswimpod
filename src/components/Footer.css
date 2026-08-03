@@ -93,6 +93,17 @@
   font-weight: 600;
 }
 
+.privacy-link {
+  color: var(--text-muted);
+  margin-left: 8px;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+  color: var(--green-bright);
+}
+
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;

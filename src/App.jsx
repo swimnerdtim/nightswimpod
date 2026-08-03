@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Episodes from './pages/Episodes';
 import Episode from './pages/Episode';
 import About from './pages/About';
+import Privacy from './pages/Privacy';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/episodes" element={<Episodes />} />
             <Route path="/episodes/:slug" element={<Episode />} />
             <Route path="/about" element={<About />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </main>
         <Footer />

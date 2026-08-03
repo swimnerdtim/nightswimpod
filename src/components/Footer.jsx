@@ -55,7 +55,7 @@ function Footer() {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Night Swim Podcast. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Night Swim Podcast. All rights reserved. <Link to="/privacy" className="privacy-link">Privacy Policy</Link></p>
           <p className="presented-by">Presented by <a href="https://swimnerd.com" target="_blank" rel="noopener noreferrer">Swimnerd</a></p>
         </div>
       </div>
