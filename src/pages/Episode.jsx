@@ -104,6 +104,14 @@ function Episode() {
             <div className="episode-description-full">
               <h2>About This Episode</h2>
               <p>{episode.description}</p>
+
+              <p className="episode-presented-by">
+                🎙️ Presented by{' '}
+                <a href="https://swimnerd.com" target="_blank" rel="noopener">
+                  Swimnerd
+                </a>{' '}— timing systems, pace clocks, scoreboards, and AI
+                coaching tools for competitive swimming.
+              </p>
               
               {episode.fullTranscript && (
                 <div className="episode-transcript">
