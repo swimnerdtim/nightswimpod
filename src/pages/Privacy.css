@@ -36,6 +36,14 @@
   margin-top: 24px;
 }
 
+.privacy-content h3 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
 .privacy-content p {
   margin-bottom: 20px;
 }

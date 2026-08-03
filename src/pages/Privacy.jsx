@@ -7,86 +7,149 @@ function Privacy() {
         <div className="container">
           <div className="privacy-hero">
             <h1 className="section-title">PRIVACY POLICY</h1>
-            <p className="privacy-updated">Last updated: August 3, 2026</p>
+            <p className="privacy-updated">Effective Date: July 27, 2026</p>
           </div>
 
           <div className="privacy-content">
             <p>
-              Night Swim Podcast ("we," "us," or "our") operates nightswimpod.com (the "Site"). This
-              Privacy Policy explains what information we collect, how we use it, and the choices you
-              have when you visit our Site or interact with us.
+              Welcome to The Night Swim Podcast ("Night Swim," "we," "our," or "us"). We respect your
+              privacy and are committed to protecting any personal information you share with us.
+            </p>
+            <p>
+              This Privacy Policy explains what information we collect, how we use it, and your choices
+              regarding that information.
             </p>
 
             <h2>Information We Collect</h2>
+
+            <h3>Information You Provide</h3>
+            <p>We may collect information that you voluntarily provide, including:</p>
+            <ul>
+              <li>Name</li>
+              <li>Email address</li>
+              <li>Messages submitted through our contact form</li>
+              <li>Information you provide when subscribing to newsletters or updates</li>
+            </ul>
+            <p>Providing this information is entirely voluntary.</p>
+
+            <h3>Information Collected Automatically</h3>
             <p>
-              We collect minimal information through the Site. This may include:
+              When you visit our website, certain information may be collected automatically, including:
             </p>
             <ul>
-              <li>
-                <strong>Usage data</strong> — standard analytics such as pages visited, browser type,
-                device type, and referring URLs, collected automatically when you browse the Site.
-              </li>
-              <li>
-                <strong>Contact information</strong> — if you sign up for our email list or contact us
-                directly, we collect the information you provide (e.g., name, email address).
-              </li>
-              <li>
-                <strong>Cookies</strong> — small data files that may be used to remember preferences and
-                understand how visitors use the Site.
-              </li>
+              <li>IP address</li>
+              <li>Browser type</li>
+              <li>Device type</li>
+              <li>Operating system</li>
+              <li>Pages visited</li>
+              <li>Time spent on the website</li>
+              <li>Referring websites</li>
+              <li>Approximate geographic location</li>
             </ul>
+            <p>This information helps us improve the website and understand how visitors use our content.</p>
 
-            <h2>How We Use Information</h2>
-            <p>We use the information we collect to:</p>
+            <h2>Cookies</h2>
+            <p>Our website may use cookies and similar technologies to:</p>
             <ul>
-              <li>Operate, maintain, and improve the Site</li>
-              <li>Send episode updates or newsletters to subscribers who opt in</li>
-              <li>Understand how visitors use the Site so we can make it better</li>
-              <li>Respond to inquiries and communicate with you</li>
+              <li>Remember your preferences</li>
+              <li>Improve website performance</li>
+              <li>Analyze website traffic</li>
+              <li>Measure audience engagement</li>
             </ul>
-            <p>We do not sell your personal information to third parties.</p>
-
-            <h2>Third-Party Services</h2>
-            <p>
-              The Site links to and embeds content from third-party platforms, including YouTube,
-              Spotify, Apple Podcasts, Instagram, TikTok, and Facebook. These platforms have their own
-              privacy policies governing any data they collect, and we encourage you to review them.
-              We are not responsible for the privacy practices of these third-party sites.
-            </p>
+            <p>Most web browsers allow you to disable cookies through your browser settings.</p>
 
             <h2>Analytics</h2>
+            <p>We may use services such as Google Analytics or similar analytics providers to understand website usage.</p>
+            <p>These services may collect anonymous information about how visitors interact with the site.</p>
+
+            <h2>Embedded Content</h2>
+            <p>Episodes may be embedded from third-party services including:</p>
+            <ul>
+              <li>YouTube</li>
+              <li>Spotify</li>
+              <li>Apple Podcasts</li>
+              <li>Buzzsprout</li>
+              <li>Other podcast platforms</li>
+            </ul>
             <p>
-              We may use standard web analytics tools to understand Site traffic and usage patterns.
-              These tools may use cookies or similar technologies to collect anonymized or aggregated
-              data. You can control cookies through your browser settings.
+              These services may collect data as though you visited their websites directly. Their
+              privacy policies govern any information they collect.
+            </p>
+
+            <h2>Email Communications</h2>
+            <p>If you subscribe to our mailing list, we may occasionally send:</p>
+            <ul>
+              <li>New episode announcements</li>
+              <li>Podcast updates</li>
+              <li>Special guests</li>
+              <li>Event information</li>
+              <li>Promotions related to Night Swim</li>
+            </ul>
+            <p>You may unsubscribe at any time using the unsubscribe link included in every email.</p>
+
+            <h2>Merchandise and Purchases</h2>
+            <p>If we offer merchandise or paid content, payment information is processed securely by third-party payment providers.</p>
+            <p>We do not store credit card numbers or payment credentials on our servers.</p>
+
+            <h2>How We Use Your Information</h2>
+            <p>We may use collected information to:</p>
+            <ul>
+              <li>Operate the website</li>
+              <li>Respond to inquiries</li>
+              <li>Improve the podcast and website</li>
+              <li>Analyze audience engagement</li>
+              <li>Send newsletters (only if you subscribe)</li>
+              <li>Prevent fraud and abuse</li>
+              <li>Comply with legal obligations</li>
+            </ul>
+
+            <h2>Sharing Information</h2>
+            <p>We do not sell your personal information.</p>
+            <p>We may share information with trusted service providers that help us operate the website, including:</p>
+            <ul>
+              <li>Website hosting providers</li>
+              <li>Email marketing providers</li>
+              <li>Analytics providers</li>
+              <li>Payment processors</li>
+            </ul>
+            <p>These providers only receive information necessary to perform their services.</p>
+
+            <h2>Data Security</h2>
+            <p>We use commercially reasonable security measures to protect your information.</p>
+            <p>
+              However, no internet transmission or electronic storage method is completely secure, and
+              we cannot guarantee absolute security.
             </p>
 
             <h2>Children's Privacy</h2>
-            <p>
-              The Site is not directed at children under 13, and we do not knowingly collect personal
-              information from children under 13.
-            </p>
+            <p>The Night Swim Podcast is not directed toward children under the age of 13.</p>
+            <p>We do not knowingly collect personal information from children under 13.</p>
+            <p>If you believe a child has submitted personal information, please contact us so we can remove it.</p>
 
-            <h2>Your Choices</h2>
-            <p>
-              You can opt out of email communications at any time by using the unsubscribe link in any
-              email we send, or by contacting us directly. You can also disable cookies through your
-              browser settings, though this may affect how the Site functions.
-            </p>
+            <h2>Third-Party Links</h2>
+            <p>Our website may contain links to other websites.</p>
+            <p>We are not responsible for the privacy practices or content of third-party websites.</p>
 
-            <h2>Changes to This Policy</h2>
-            <p>
-              We may update this Privacy Policy from time to time. Any changes will be posted on this
-              page with an updated "Last updated" date.
-            </p>
+            <h2>Your Rights</h2>
+            <p>Depending on your location, you may have the right to:</p>
+            <ul>
+              <li>Request access to your personal information</li>
+              <li>Request correction of inaccurate information</li>
+              <li>Request deletion of your information</li>
+              <li>Withdraw consent where applicable</li>
+            </ul>
+            <p>To exercise these rights, please contact us.</p>
+
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time.</p>
+            <p>Changes become effective immediately upon posting the updated version on this page.</p>
 
             <h2>Contact Us</h2>
+            <p>If you have questions regarding this Privacy Policy, you may contact us at:</p>
             <p>
-              If you have questions about this Privacy Policy, please contact us through our social
-              channels linked in the footer below, or reach out to our presenting partner{' '}
-              <a href="https://swimnerd.com" target="_blank" rel="noopener noreferrer" className="host-link">
-                Swimnerd
-              </a>.
+              The Night Swim Podcast<br />
+              Email: <a href="mailto:info@nightswimpod.com" className="host-link">info@nightswimpod.com</a><br />
+              Website: <a href="https://nightswimpod.com" target="_blank" rel="noopener noreferrer" className="host-link">https://nightswimpod.com</a>
             </p>
           </div>
         </div>
