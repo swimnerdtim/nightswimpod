@@ -107,7 +107,7 @@ function Home() {
                 Just honest takes on the sport we've dedicated our lives to.
               </p>
               <p>
-                New episodes weekly. Grab your goggles, hit subscribe, and dive in. 🏊‍♂️ Presented by <strong><a href="https://swimnerd.com" target="_blank" rel="noopener noreferrer" className="host-link">Swimnerd</a></strong>.
+                New episodes weekly. Grab your goggles, hit subscribe, and dive in. 🏊‍♂️ Interested in the best swimming technology? Check out <strong><a href="https://swimpractice.com" target="_blank" rel="noopener noreferrer" className="host-link">SwimPractice</a></strong>.
               </p>
             </div>
             
