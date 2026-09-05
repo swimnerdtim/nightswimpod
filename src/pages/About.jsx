@@ -34,7 +34,7 @@ function About() {
                 </p>
                 <p className="mission-footer">
                   New episodes weekly. Grab your goggles, hit subscribe, and dive in. 
-                  🏊‍♂️ Interested in the best swimming technology? Check out <strong><a href="https://swimpractice.com" target="_blank" rel="noopener noreferrer">SwimPractice</a></strong>.
+                  🏊‍♂️ Interested in the <strong><a href="https://swimpractice.com" target="_blank" rel="noopener noreferrer">best swimming technology</a></strong>?
                 </p>
               </div>
               

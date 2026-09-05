@@ -56,7 +56,7 @@ function Footer() {
         
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Night Swim Podcast. All rights reserved. <Link to="/privacy" className="privacy-link">Privacy Policy</Link></p>
-          <p className="presented-by">Interested in the best swimming technology? Check out <a href="https://swimpractice.com" target="_blank" rel="noopener noreferrer">SwimPractice</a></p>
+          <p className="presented-by">Interested in the <a href="https://swimpractice.com" target="_blank" rel="noopener noreferrer">best swimming technology</a>?</p>
         </div>
       </div>
     </footer>

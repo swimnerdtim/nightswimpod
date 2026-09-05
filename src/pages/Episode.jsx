@@ -106,10 +106,10 @@ function Episode() {
               <p>{episode.description}</p>
 
               <p className="episode-presented-by">
-                🎙️ Interested in the best swimming technology? Check out{' '}
+                🎙️ Interested in the{' '}
                 <a href="https://swimpractice.com" target="_blank" rel="noopener">
-                  SwimPractice
-                </a>{' '}— timing systems, pace clocks, scoreboards, and AI
+                  best swimming technology
+                </a>? Timing systems, pace clocks, scoreboards, and AI
                 coaching tools for competitive swimming.
               </p>
               
@@ -132,7 +132,7 @@ function Episode() {
                     })}
                   </div>
                   <div className="transcript-footer">
-                    <p>🎙️ Interested in the best swimming technology? Check out <a href="https://swimpractice.com" target="_blank" rel="noopener noreferrer">SwimPractice</a></p>
+                    <p>🎙️ Interested in the <a href="https://swimpractice.com" target="_blank" rel="noopener noreferrer">best swimming technology</a>?</p>
                   </div>
                 </div>
               )}
@@ -146,7 +146,7 @@ function Episode() {
                     ))}
                   </div>
                   <div className="transcript-footer">
-                    <p>🎙️ Interested in the best swimming technology? Check out <a href="https://swimpractice.com" target="_blank" rel="noopener noreferrer">SwimPractice</a></p>
+                    <p>🎙️ Interested in the <a href="https://swimpractice.com" target="_blank" rel="noopener noreferrer">best swimming technology</a>?</p>
                   </div>
                 </div>
               )}

@@ -107,7 +107,7 @@ function Home() {
                 Just honest takes on the sport we've dedicated our lives to.
               </p>
               <p>
-                New episodes weekly. Grab your goggles, hit subscribe, and dive in. 🏊‍♂️ Interested in the best swimming technology? Check out <strong><a href="https://swimpractice.com" target="_blank" rel="noopener noreferrer" className="host-link">SwimPractice</a></strong>.
+                New episodes weekly. Grab your goggles, hit subscribe, and dive in. 🏊‍♂️ Interested in the <strong><a href="https://swimpractice.com" target="_blank" rel="noopener noreferrer" className="host-link">best swimming technology</a></strong>?
               </p>
             </div>
             
